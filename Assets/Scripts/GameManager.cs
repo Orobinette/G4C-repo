@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
 
     Vector3 offset = new Vector3(-1, 0, 0); //Spawn point of player from truck 
 
+    int adjustment = 1;
+
 
 /*********
 *FUNCTIONS
@@ -43,7 +45,7 @@ public class GameManager : MonoBehaviour
     //Custom Functions
     public void SwitchGameState(int new_state) //Switch Between Driving and Walking (parameter = the new state)
     {
-        game_state = new_state; //Game state = the paramater when the function is call
+        game_state = new_state; 
 
         if(game_state == 0)
         {

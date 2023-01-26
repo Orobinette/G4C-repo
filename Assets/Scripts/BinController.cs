@@ -25,7 +25,7 @@ public class BinController : MonoBehaviour
     GameObject playerObj; PlayerMovement playerMovement; //Player References
 
     //Script Variables
-    int pickup = 0; //0 = false, 1 = true
+    bool pickup = false; //0 = false, 1 = true
     bool grabbable = false; //Whether or not the player is touching the bin
 
 
@@ -49,6 +49,7 @@ public class BinController : MonoBehaviour
         //Bin Construction
         this.gameObject.tag = "bin"; 
         
+        binRenderer.sprite = spriteList[Random.Range(0, 2)];
     }
     
     void Update()
@@ -77,7 +78,7 @@ public class BinController : MonoBehaviour
     }
     void OnTriggerStay2D(Collider2D other) //If putdown on truck by player
     {
-        if(pickup == 0 && gameManager.game_state == 1 && other.gameObject.name == "Loading Zone") 
+        if(pickup == false && gameManager.game_state == 1 && other.gameObject.name == "Loading Zone") 
         {
             Destroy(this.gameObject);
             gameManager.ChangeScore(1);
@@ -90,15 +91,15 @@ public class BinController : MonoBehaviour
     {
         if(gameManager.game_state == 1) 
         {
-            if(pickup == 0 && grabbable == true) //Pickup
+            if(pickup == false && grabbable == true) //Pickup
             {
                 binTrans.parent = playerMovement.playerTrans;
-                pickup = 1;
+                pickup = true;
             }
-            else if(pickup == 1) //Putdown
+            else if(pickup == true) //Putdown
             {
                 binTrans.parent = null;
-                pickup = 0;
+                pickup = false;
             }
         }
     }

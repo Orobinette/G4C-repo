@@ -73,7 +73,6 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.name == "LoadingZone")
         {
             on_truck = true;
-            Debug.Log(on_truck);
         }
     }
     void OnTriggerExit2D(Collider2D other) 
@@ -81,7 +80,6 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.name == "LoadingZone")
         {
             on_truck = false;
-            Debug.Log(on_truck);
         }
     }
 }

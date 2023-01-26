@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - divider
+  - bin
   layers:
   - Default
   - TransparentFX
