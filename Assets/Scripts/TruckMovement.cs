@@ -5,6 +5,7 @@ using UnityEngine;
 public class TruckMovement : MonoBehaviour
 {
     [SerializeField] GameManager gameManager;
+    [SerializeField] Camera camera;
 
     public Transform truckTrans;
     public Rigidbody2D rb;
@@ -13,7 +14,6 @@ public class TruckMovement : MonoBehaviour
     float acceleration = 0;
     float minAcceleration = 0;
     float maxAcceleration = 5;
-    float ramp = 0.02f;
 
     bool moving = false;
  
@@ -24,26 +24,26 @@ public class TruckMovement : MonoBehaviour
         {
             moving = false;
             
-            if (Input.GetKey(KeyCode.UpArrow))
+            if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
             {
                 moving = true;
-                Accelerate();
+                Accelerate(0.02f);
             }
-            else if (Input.GetKey(KeyCode.DownArrow))
+            else if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
             {
                 moving = true;
-                Accelerate(); 
+                Accelerate(-0.02f); 
             }
             else
             {
                 acceleration = 0;
             }
 
-            if (Input.GetKey(KeyCode.LeftArrow) && moving == true)
+            if (Input.GetKey(KeyCode.LeftArrow) && moving == true || Input.GetKey(KeyCode.A))
             {
                 transform.Rotate(0, 0, 0.5f);
             }
-            else if (Input.GetKey(KeyCode.RightArrow) && moving == true)
+            else if (Input.GetKey(KeyCode.RightArrow) && moving == true || Input.GetKey(KeyCode.D))
             {
                 transform.Rotate(0, 0, -0.5f);
             }  
@@ -52,6 +52,11 @@ public class TruckMovement : MonoBehaviour
                 gameManager.SwitchGameState(1);
             }
 
+            
+
+
+
+            //camera.transform.position = new Vector3(truckTrans.position.x, truckTrans.position.y, -10);
         }    
     }    
     
@@ -61,7 +66,7 @@ public class TruckMovement : MonoBehaviour
         transform.Translate(0, acceleration * Time.deltaTime, 0, Space.Self);
     }
     
-    void Accelerate() 
+    void Accelerate(float ramp) 
     {
         acceleration += ramp;
         if(acceleration < minAcceleration)
