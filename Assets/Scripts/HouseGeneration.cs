@@ -11,11 +11,10 @@ public class HouseGeneration : MonoBehaviour
     [SerializeField] RuleTile roadTile;
 
     int x; int y;
-    static int start = -3; static int end = start + 8;
+    static int startPoint = 0; static int endPoint = startPoint + 17;
 
-    bool evenColumn = false;
+    bool spawnableRow = false;
 
-    // Start is called before the first frame update
     void Start()
     {
         GenerateHouses();
@@ -23,38 +22,41 @@ public class HouseGeneration : MonoBehaviour
 
     void GenerateHouses() 
     {
-        for(x = start; x < end; x++) //Go through every x coord
+        for(x = startPoint; x < endPoint; x++)
         {
-            if(x % 2 == 0)
+            if(x % 4 == 0)
             {
-                evenColumn = true;
+                spawnableRow = false;
             }
             else 
             {
-                evenColumn = false;
+                spawnableRow = true;
             }
 
-            for(y = start; y < end; y++) //Go through every y coord
+            for(y = startPoint; y < endPoint; y++)
             {
-                /*
-                if(y % 2 == 0 && evenColumn == true) //If on an even space
+                if(x % 2 == 1 && y % 2 == 1)
                 {
-                    grid.SetTile(new Vector3Int(x, y, 0), tileList[Random.Range(0, 4)]); //Spawn random house
+                    grid.SetTile(new Vector3Int(x, y, 0), tileList[Random.Range(0, tileList.Count)]);
+                }
+                else if (x % 4 != 0 && y % 4 != 0)
+                {
+                    if(Random.Range(0, 2) == 0)
+                    {
+                        grid.SetTile(new Vector3Int(x, y, 0), tileList[Random.Range(0, tileList.Count)]);
+                    }
+                    else 
+                    {
+                        grid.SetTile(new Vector3Int(x, y, 0), roadTile);
+                    }
                 }
                 else 
                 {
                     grid.SetTile(new Vector3Int(x, y, 0), roadTile);
                 }
-                */
-                if(Random.Range(0, 3) == 2) 
-                {
-                    grid.SetTile(new Vector3Int(x, y, 0), tileList[Random.Range(0, 4)]);
-                }
-                else 
-                {
-                    grid.SetTile(new Vector3Int(x, y, 0), roadTile);
-                }
-            } 
+            }
         }
     }
 }
+
+

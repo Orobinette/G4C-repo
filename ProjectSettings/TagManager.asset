@@ -43,3 +43,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: tiles
+    uniqueID: 3760268913
+    locked: 0
+  - name: truck
+    uniqueID: 3110535773
+    locked: 0
