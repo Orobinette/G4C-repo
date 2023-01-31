@@ -14,7 +14,7 @@ public class TruckMovement : MonoBehaviour
     float acceleration = 0;
     float minAcceleration = 0;
     float maxAcceleration = 5;
-
+    
     bool moving = false;
  
     
