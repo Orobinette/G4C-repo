@@ -24,7 +24,7 @@ public class TruckMovement : MonoBehaviour
         {
             moving = false;
             
-            if (Input.GetKey(KeyCode.UpArrow))
+            if (Input.GetKey(KeyCode.UpArrow) )
             {
                 moving = true;
                 Accelerate();
