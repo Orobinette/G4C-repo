@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class TruckMovement : MonoBehaviour
 {
+
+/*********
+*VARIABLES
+**********/
+
+    //Script References
     [SerializeField] GameManager gameManager;
 
+    //Component References
     public Transform truckTrans;
     public Rigidbody2D rb;
 
@@ -16,34 +23,37 @@ public class TruckMovement : MonoBehaviour
     float ramp = 0.02f;
 
     bool moving = false;
- 
+
+
+/**********
+*FUNCTIONS
+***********/
     
+    //Built-In
     void Update () 
     {
         if(gameManager.game_state == 0)
         {
+            //Setup
             moving = false;
             
-            if (Input.GetKey(KeyCode.UpArrow) )
+            //Acceleration
+            if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey("w"))
             {
                 moving = true;
                 Accelerate();
             }
-            else if (Input.GetKey(KeyCode.DownArrow))
-            {
-                moving = true;
-                Accelerate(); 
-            }
             else
             {
-                acceleration = 0;
+                Decelerate();
             }
 
-            if (Input.GetKey(KeyCode.LeftArrow) && moving == true)
+            //Turning
+            if (Input.GetKey(KeyCode.LeftArrow) && moving == true || Input.GetKey("a") && moving == true)
             {
                 transform.Rotate(0, 0, 0.5f);
             }
-            else if (Input.GetKey(KeyCode.RightArrow) && moving == true)
+            else if (Input.GetKey(KeyCode.RightArrow) && moving == true || Input.GetKey("d") && moving == true)
             {
                 transform.Rotate(0, 0, -0.5f);
             }  
@@ -53,6 +63,10 @@ public class TruckMovement : MonoBehaviour
             }
 
         }    
+        else if (gameManager.game_state == 1) 
+        {
+            acceleration = 0f; //Prevents acceleration Glitch
+        }
     }    
     
     
@@ -61,6 +75,7 @@ public class TruckMovement : MonoBehaviour
         transform.Translate(0, acceleration * Time.deltaTime, 0, Space.Self);
     }
     
+    //Custom Functions
     void Accelerate() 
     {
         acceleration += ramp;
@@ -71,7 +86,19 @@ public class TruckMovement : MonoBehaviour
         else if(acceleration > maxAcceleration)
         {
             acceleration = maxAcceleration;
-        }
+        }    
     }
     
+    void Decelerate() 
+    {
+        acceleration -= ramp;
+        if(acceleration < minAcceleration)
+        {
+            acceleration = minAcceleration;
+        }
+        else if(acceleration > maxAcceleration)
+        {
+            acceleration = maxAcceleration;
+        }
+    }
 }

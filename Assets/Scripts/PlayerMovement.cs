@@ -62,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void FixedUpdate () //Apply movement
+    void FixedUpdate ()
     {
         rb.MovePosition(rb.transform.position + movement * speed * Time.fixedDeltaTime);
     }
