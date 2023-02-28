@@ -14,6 +14,9 @@ public class ClickAndDrag : MonoBehaviour
 
     public GameObject selectedObject;
     Vector3 offset;
+
+    SpriteRenderer spriteRenderer;
+
     void Update()
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -23,6 +26,9 @@ public class ClickAndDrag : MonoBehaviour
             if (targetObject)
             {
                 selectedObject = targetObject.transform.gameObject;
+
+                spriteRenderer = selectedObject.GetComponent<SpriteRenderer>();
+                spriteRenderer.sortingOrder = 1;
                 offset = selectedObject.transform.position - mousePosition;
             }
         }
@@ -33,6 +39,7 @@ public class ClickAndDrag : MonoBehaviour
         if (Input.GetMouseButtonUp(0) && selectedObject)
         {
             selectedObject = null;
+            spriteRenderer.sortingOrder = 2;
         }
     }
 }
