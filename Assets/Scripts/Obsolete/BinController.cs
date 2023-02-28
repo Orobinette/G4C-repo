@@ -21,7 +21,7 @@ public class BinController : MonoBehaviour
     [SerializeField] List<Sprite> spriteList = new List<Sprite>(); //Possible Sprites
 
     //Object References
-    GameObject gameManagerObj; GameManager gameManager; //GameManager References
+    GameObject gameManagerObj; ObsGameManager gameManager; //GameManager References
     GameObject playerObj; PlayerMovement playerMovement; //Player References
 
     //Script Variables
@@ -44,7 +44,7 @@ public class BinController : MonoBehaviour
         playerMovement = playerObj.GetComponent<PlayerMovement>(); //Player Obj
 
         gameManagerObj = GameObject.Find("GameManager");
-        gameManager = gameManagerObj.GetComponent<GameManager>(); //GameManager Obj
+        //gameManager = gameManagerObj.GetComponent<GameManager>(); //GameManager Obj
 
         //Bin Construction
         this.gameObject.tag = "bin"; 

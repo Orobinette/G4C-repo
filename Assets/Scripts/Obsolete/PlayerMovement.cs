@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
 **********/
 
     //Object and Class References
-    [SerializeField] GameManager gameManager;
+    [SerializeField] ObsGameManager gameManager;
 
     //Self References
     public Transform playerTrans;

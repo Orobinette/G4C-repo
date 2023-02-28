@@ -10,7 +10,7 @@ public class TruckMovement : MonoBehaviour
 **********/
 
     //Script References
-    [SerializeField] GameManager gameManager;
+    [SerializeField] ObsGameManager gameManager;
 
     //Component References
     public Transform truckTrans;
