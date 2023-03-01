@@ -9,6 +9,7 @@ TagManager:
   - recycling
   - hazard
   - trash
+  - bin
   layers:
   - Default
   - TransparentFX
@@ -45,4 +46,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: bin
+    uniqueID: 3900432695
+    locked: 0
+  - name: item
+    uniqueID: 4204807549
     locked: 0
