@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2254042417082370901}
   - component: {fileID: -5876908458073437567}
-  - component: {fileID: -6386746759416627973}
-  - component: {fileID: 3054220347193677527}
-  - component: {fileID: -1630371567386609505}
+  - component: {fileID: 7718585689126788604}
+  - component: {fileID: -643513363633000262}
+  - component: {fileID: -2812898876770069136}
   m_Layer: 0
-  m_Name: pref_apple
+  m_Name: pref_glass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,21 +73,21 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1204970901
-  m_SortingLayer: 0
+  m_SortingLayerID: -90159747
+  m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8ed394e882a0e864c83f9a570d98c72c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8efdb8e721586644ea22bf63f90a6557, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.875, y: 1}
+  m_Size: {x: 0.625, y: 1.5625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &-6386746759416627973
+--- !u!61 &7718585689126788604
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,16 +104,16 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.875, y: 1}
-    newSize: {x: 0.875, y: 1}
+    oldSize: {x: 0.625, y: 1.5625}
+    newSize: {x: 0.625, y: 1.5625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.875, y: 1}
+  m_Size: {x: 0.625, y: 1.5625}
   m_EdgeRadius: 0
---- !u!50 &3054220347193677527
+--- !u!50 &-643513363633000262
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -134,7 +134,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-1630371567386609505
+--- !u!114 &-2812898876770069136
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,4 +146,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd9e8067d01bd5348ba5db15224e0469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trashType: compost
+  trashType: recycling

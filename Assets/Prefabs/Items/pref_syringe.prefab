@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2254042417082370901}
   - component: {fileID: -5876908458073437567}
-  - component: {fileID: -5326655244253644894}
-  - component: {fileID: -4221126900738905874}
-  - component: {fileID: 8205657603600394864}
+  - component: {fileID: 6447175965815289309}
+  - component: {fileID: -6223774937621366234}
+  - component: {fileID: -4052184800688343886}
   m_Layer: 0
-  m_Name: pref_razor
+  m_Name: pref_syringe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,21 +73,21 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1204970901
-  m_SortingLayer: 0
+  m_SortingLayerID: -90159747
+  m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bd162e5acf238ec40aac503bab2c70de, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eb00f38027cc68c4ba5ea23ac4a52df9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 0.75}
+  m_Size: {x: 1.25, y: 1.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &-5326655244253644894
+--- !u!61 &6447175965815289309
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,16 +104,16 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 0.75}
-    newSize: {x: 1, y: 0.75}
+    oldSize: {x: 1.25, y: 1.25}
+    newSize: {x: 1.25, y: 1.25}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.75}
+  m_Size: {x: 1.25, y: 1.25}
   m_EdgeRadius: 0
---- !u!50 &-4221126900738905874
+--- !u!50 &-6223774937621366234
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -134,7 +134,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8205657603600394864
+--- !u!114 &-4052184800688343886
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

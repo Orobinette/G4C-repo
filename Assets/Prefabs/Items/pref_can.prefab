@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2254042417082370901}
   - component: {fileID: -5876908458073437567}
-  - component: {fileID: 4091627802703451087}
-  - component: {fileID: 4541351298537189889}
-  - component: {fileID: -1680718703362172998}
+  - component: {fileID: 5967112306166440414}
+  - component: {fileID: 6453052786140940292}
+  - component: {fileID: 1001155401141352066}
   m_Layer: 0
-  m_Name: pref_bottle
+  m_Name: pref_can
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,21 +73,21 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1204970901
-  m_SortingLayer: 0
+  m_SortingLayerID: -90159747
+  m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6240e0e17e40ab241bb9b3ba6944df49, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 98343b529e2085741a3407552321146f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.625, y: 1.4375}
+  m_Size: {x: 0.875, y: 1.375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &4091627802703451087
+--- !u!61 &5967112306166440414
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,16 +104,16 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.625, y: 1.4375}
-    newSize: {x: 0.625, y: 1.4375}
+    oldSize: {x: 0.875, y: 1.375}
+    newSize: {x: 0.875, y: 1.375}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.625, y: 1.4375}
+  m_Size: {x: 0.875, y: 1.375}
   m_EdgeRadius: 0
---- !u!50 &4541351298537189889
+--- !u!50 &6453052786140940292
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -134,7 +134,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-1680718703362172998
+--- !u!114 &1001155401141352066
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
