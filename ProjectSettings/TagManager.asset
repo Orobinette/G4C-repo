@@ -5,7 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - divider
-  - bin
+  - compost
+  - recycling
+  - hazard
+  - trash
   layers:
   - Default
   - TransparentFX
