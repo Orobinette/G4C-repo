@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3244272610538462202}
   - component: {fileID: -8864317641159864291}
+  - component: {fileID: -3106863632600433901}
   - component: {fileID: 4587323305605469278}
   m_Layer: 0
   m_Name: pref_compostTruck
@@ -85,6 +86,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &-3106863632600433901
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6834311125955355423}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!114 &4587323305605469278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,10 +125,10 @@ MonoBehaviour:
   - {fileID: -1217778394, guid: 210a593fe17932f4d8f8d628dfe048dd, type: 3}
   - {fileID: -1459127626, guid: 210a593fe17932f4d8f8d628dfe048dd, type: 3}
   spawnPointList:
-  - {x: 7, y: -4, z: 0}
-  - {x: -7, y: 4, z: 0}
-  - {x: 7, y: 4, z: 0}
-  - {x: -7, y: -4, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: -7, y: 6, z: 0}
+  - {x: 10, y: 4, z: 0}
+  - {x: -10, y: -4, z: 0}
   itemList:
   - {fileID: 2814542187764048766, guid: be309d364e416b84c928c221631d0ca4, type: 3}
   directionList:
@@ -116,3 +138,4 @@ MonoBehaviour:
   - {x: 1, y: 0, z: 0}
   trans: {fileID: 3244272610538462202}
   spriteRenderer: {fileID: -8864317641159864291}
+  rb: {fileID: -3106863632600433901}

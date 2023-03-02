@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5044733872396788561}
   - component: {fileID: 8986932615472412094}
+  - component: {fileID: 1728522568162193433}
   - component: {fileID: -6622993283661476434}
   m_Layer: 0
   m_Name: pref_recyclingTruck
@@ -85,6 +86,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &1728522568162193433
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6762314106284228296}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!114 &-6622993283661476434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,10 +125,10 @@ MonoBehaviour:
   - {fileID: 2016612120, guid: 210a593fe17932f4d8f8d628dfe048dd, type: 3}
   - {fileID: -1582235484, guid: 210a593fe17932f4d8f8d628dfe048dd, type: 3}
   spawnPointList:
-  - {x: 7, y: -4, z: 0}
-  - {x: -4, y: 7, z: 0}
-  - {x: 7, y: 4, z: 0}
-  - {x: -7, y: -4, z: 0}
+  - {x: 7, y: -6, z: 0}
+  - {x: -4, y: 6, z: 0}
+  - {x: 10, y: 4, z: 0}
+  - {x: -10, y: -4, z: 0}
   itemList:
   - {fileID: 2814542187764048766, guid: 5fdcc891e50727242bd5c75441519982, type: 3}
   - {fileID: 2814542187764048766, guid: 35c89b24c9ac32e468ae428d2ae02313, type: 3}
@@ -118,3 +140,4 @@ MonoBehaviour:
   - {x: 1, y: 0, z: 0}
   trans: {fileID: 5044733872396788561}
   spriteRenderer: {fileID: 8986932615472412094}
+  rb: {fileID: 1728522568162193433}
