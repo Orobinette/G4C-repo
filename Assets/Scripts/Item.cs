@@ -6,6 +6,7 @@ public class Item : MonoBehaviour
 {
     ClickAndDrag clickAndDrag;
     GameManager gameManager;
+    GameObject gameManagerObj;
     Camera camera;
 
     [SerializeField] string trashType;
@@ -16,7 +17,9 @@ public class Item : MonoBehaviour
     {
         camera = Camera.main;
         clickAndDrag = camera.GetComponent<ClickAndDrag>();
-        gameManager = camera.GetComponent<GameManager>();
+
+        gameManagerObj = GameObject.FindWithTag("GameController");
+        gameManager = gameManagerObj.GetComponent<GameManager>();
     }
 
     void OnTriggerEnter2D(Collider2D other) 
@@ -49,14 +52,13 @@ public class Item : MonoBehaviour
         {
             if(onCorrectBin == true)
             {
-                gameManager.score ++;
+                gameManager.ChangeScore(1);
             }
             else 
             {
-                gameManager.score --;
+                gameManager.ChangeScore(-1);
             }
             Destroy(this.gameObject);
         }
-        Debug.Log(gameManager.score);
     }
 }
