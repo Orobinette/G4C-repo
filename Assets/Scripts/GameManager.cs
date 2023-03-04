@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     void Start() 
     {
         InvokeRepeating("SpawnTruck", 3f, 5f);
-        scoreText.text = "0";
+        scoreText.text = "Score: 0";
     }
 
     void SpawnTruck() 
@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
         {
             score = 0;
         }
-        scoreText.text = score.ToString();
+        scoreText.text = "Score: " + score.ToString();
     }
 
 }

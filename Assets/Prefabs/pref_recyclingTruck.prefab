@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8986932615472412094}
   - component: {fileID: 1728522568162193433}
   - component: {fileID: -6622993283661476434}
+  - component: {fileID: 1174417854250495843}
   m_Layer: 0
   m_Name: pref_recyclingTruck
   m_TagString: Untagged
@@ -124,20 +125,26 @@ MonoBehaviour:
   - {fileID: 1563705569, guid: 614a4653be655ef40811382c583eb3a7, type: 3}
   - {fileID: 2016612120, guid: 210a593fe17932f4d8f8d628dfe048dd, type: 3}
   - {fileID: -1582235484, guid: 210a593fe17932f4d8f8d628dfe048dd, type: 3}
-  spawnPointList:
-  - {x: 7, y: -6, z: 0}
-  - {x: -4, y: 6, z: 0}
-  - {x: 10, y: 4, z: 0}
-  - {x: -10, y: -4, z: 0}
+  spawnPointList: []
+  itemSpawnPoints: []
   itemList:
   - {fileID: 2814542187764048766, guid: 5fdcc891e50727242bd5c75441519982, type: 3}
   - {fileID: 2814542187764048766, guid: 35c89b24c9ac32e468ae428d2ae02313, type: 3}
   - {fileID: 2814542187764048766, guid: 5a95da478dc924044b030ce69901cd0b, type: 3}
-  directionList:
-  - {x: 0, y: 1, z: 0}
-  - {x: 0, y: -1, z: 0}
-  - {x: -1, y: 0, z: 0}
-  - {x: 1, y: 0, z: 0}
+  directionList: []
   trans: {fileID: 5044733872396788561}
   spriteRenderer: {fileID: 8986932615472412094}
   rb: {fileID: 1728522568162193433}
+--- !u!114 &1174417854250495843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6762314106284228296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d479e1a728cbf8a4899a42de1d552a2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  truck: {fileID: -6622993283661476434}

@@ -25,13 +25,27 @@ public class Truck : MonoBehaviour
     void Start()
     {
         orientation = Random.Range(0, 4);
-        spriteRenderer.sprite = spriteList[orientation];
 
+        directionList.Add(new Vector3(0f, 1f, 0f));
+        directionList.Add(new Vector3(0f, -1f, 1f));
+        directionList.Add(new Vector3(-1f, 0f, 0f));
+        directionList.Add(new Vector3(1f, 0f, 0f));
+
+        spawnPointList.Add(new Vector3(7f, -6f, 0f));
+        spawnPointList.Add(new Vector3(-7f, 6f, 0f));
+        spawnPointList.Add(new Vector3(10f, 4f, 0f));
+        spawnPointList.Add(new Vector3(-10f, -4f, 0f));
+
+        itemSpawnPoints.Add(new Vector3(4f, 0f, 0f));
+        itemSpawnPoints.Add(new Vector3(-4f, 0f, 0f));
+        itemSpawnPoints.Add(new Vector3(0f, 2f, 0f));
+        itemSpawnPoints.Add(new Vector3(0f, -2f, 0f));
+
+
+        spriteRenderer.sprite = spriteList[orientation];
         trans.localScale = new Vector3(1f, 1f, 1f);
         trans.position = spawnPointList[orientation];
         direction = directionList[orientation];
-
-        
         item = itemList[Random.Range(0, itemList.Count)];
 
         StartCoroutine("DropOffItem");
@@ -41,7 +55,7 @@ public class Truck : MonoBehaviour
     {
         if(item != null)
         {
-            Instantiate(item, new Vector3(0f, 0f, 0f), Quaternion.identity);
+            Instantiate(item, itemSpawnPoints[orientation], Quaternion.identity);
         }
         for(var i = 0; i < 10; i++)
         {

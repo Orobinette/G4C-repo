@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: -2549500908757073972}
   - component: {fileID: -3328283207721690869}
   - component: {fileID: 712839131796841391}
+  - component: {fileID: -7534276111218694150}
   m_Layer: 0
   m_Name: pref_hazardTruck
   m_TagString: Untagged
@@ -124,20 +125,26 @@ MonoBehaviour:
   - {fileID: -605398514, guid: 614a4653be655ef40811382c583eb3a7, type: 3}
   - {fileID: -258109352, guid: 210a593fe17932f4d8f8d628dfe048dd, type: 3}
   - {fileID: -1580526554, guid: 210a593fe17932f4d8f8d628dfe048dd, type: 3}
-  spawnPointList:
-  - {x: 7, y: -6, z: 0}
-  - {x: -7, y: 6, z: 0}
-  - {x: 10, y: 4, z: 0}
-  - {x: -10, y: -4, z: 0}
+  spawnPointList: []
+  itemSpawnPoints: []
   itemList:
   - {fileID: 2814542187764048766, guid: 6c5b39c1dc8ac0e43b23153f09ceaea0, type: 3}
   - {fileID: 2814542187764048766, guid: 47d08314c4de1d44ba4246b8d2f4a81c, type: 3}
   - {fileID: 2814542187764048766, guid: 50770a60f0708e6419395843e7e51c24, type: 3}
-  directionList:
-  - {x: 0, y: 1, z: 0}
-  - {x: 0, y: -1, z: 0}
-  - {x: -1, y: 0, z: 0}
-  - {x: 1, y: 0, z: 0}
+  directionList: []
   trans: {fileID: 5031689533015863748}
   spriteRenderer: {fileID: -2549500908757073972}
   rb: {fileID: -3328283207721690869}
+--- !u!114 &-7534276111218694150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88570874667168508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d479e1a728cbf8a4899a42de1d552a2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  truck: {fileID: 712839131796841391}
