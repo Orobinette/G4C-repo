@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     public int score = 0;
     public TextMeshProUGUI scoreText;
 
+    [SerializeField] Audio audio;
+
+
     void Start() 
     {
         InvokeRepeating("SpawnTruck", 3f, 5f);
@@ -29,6 +32,16 @@ public class GameManager : MonoBehaviour
             score = 0;
         }
         scoreText.text = "Score: " + score.ToString();
+
+        if(scoreModifier > 0)
+        {
+            audio.PointSound("positive");
+        }
+        else
+        {
+            audio.PointSound("negative");
+        }
+        
     }
 
 }
