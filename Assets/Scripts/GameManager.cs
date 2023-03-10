@@ -6,18 +6,29 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+/*********
+*VARIABLES
+**********/
+
+    //Class References
     ScoreKeeper scoreKeeper;
     GameObject scoreKeeperObj;
 
+    [SerializeField] Audio audio;
+
+    //Script References
     [SerializeField] List<GameObject> truckList = new List<GameObject>();
 
     public int score = 0;
     public TextMeshProUGUI scoreText;
 
-    int time = 10; 
+    int time = 60; 
     [SerializeField] TextMeshProUGUI timerText;
 
-    [SerializeField] Audio audio;
+
+/*********
+*FUNCTIONS
+**********/
 
     void Start() 
     {
