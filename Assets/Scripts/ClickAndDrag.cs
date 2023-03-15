@@ -4,15 +4,6 @@ using UnityEngine;
 
 public class ClickAndDrag : MonoBehaviour
 {
-
-    /*
-    TODO:
-
-    -Make the mouse pick up the object with the highest sorting order
-    -Change the sorting orders so that the last picked up item is always on top
-    -Some of the things that happen on click can be moved to a seperate function outside of Update to boost performance
-    */
-
     Item item;
 
     public GameObject selectedObject;

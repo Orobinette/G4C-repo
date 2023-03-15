@@ -22,8 +22,13 @@ public class GameManager : MonoBehaviour
     public int score = 0;
     public TextMeshProUGUI scoreText;
 
+    //Timer
     int time = 60; 
     [SerializeField] TextMeshProUGUI timerText;
+
+    //Delay between Trucks spawning
+    float delayMin = 3f;
+    float delayMax = 5f;
 
 
 /*********
@@ -32,8 +37,8 @@ public class GameManager : MonoBehaviour
 
     void Start() 
     {
-        InvokeRepeating("SpawnTruck", 3f, 5f);
         StartCoroutine("Timer");
+        StartCoroutine("SpawnTruck");
 
         scoreText.text = "Score: 0";
         timerText.text = "Timer: 60";
@@ -42,9 +47,14 @@ public class GameManager : MonoBehaviour
         scoreKeeper = scoreKeeperObj.GetComponent<ScoreKeeper>();
     }
 
-    void SpawnTruck() 
+    IEnumerator SpawnTruck() 
     {
-        Instantiate(truckList[Random.Range(0, truckList.Count)]);
+        while(time > 0)
+        {
+            yield return new WaitForSeconds(Random.Range(delayMin, delayMax));
+
+            Instantiate(truckList[Random.Range(0, truckList.Count)]);
+        }
     }
 
     public void ChangeScore(int scoreModifier) 
@@ -75,6 +85,18 @@ public class GameManager : MonoBehaviour
 
             time --;
             timerText.text = "Timer: " + time.ToString();
+
+            //Time between truck spawns decreases as the game goes on
+            if(time < 40 && time > 20)
+            {
+                delayMin = 1f;
+                delayMax = 2f;
+            }
+            if(time < 20) 
+            {
+                delayMin = 0.5f;
+                delayMax = 1f;
+            }
         }
         if(time == 0) 
         {

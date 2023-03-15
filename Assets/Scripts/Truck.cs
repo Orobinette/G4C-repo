@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Truck : MonoBehaviour
 {
+/*********
+*VARIABLES
+**********/
+
     [SerializeField] List<Sprite> spriteList = new List<Sprite>();
     [SerializeField] List<Vector3> spawnPointList = new List<Vector3>();
     [SerializeField] List<Vector3> itemSpawnPoints = new List<Vector3>();
@@ -21,7 +25,11 @@ public class Truck : MonoBehaviour
 
     Vector3 speedModifier = new Vector3(80, 80, 80);
 
-    // Start is called before the first frame update
+
+/*********
+*FUNCTIONS
+**********/
+
     void Start()
     {
         orientation = Random.Range(0, 4);
@@ -48,14 +56,14 @@ public class Truck : MonoBehaviour
         direction = directionList[orientation];
         item = itemList[Random.Range(0, itemList.Count)];
 
-        StartCoroutine("DropOffItem");
+        StartCoroutine("SpawnItem");
     }
 
-    IEnumerator DropOffItem()
+    IEnumerator SpawnItem()
     {
         if(item != null)
         {
-            Instantiate(item, itemSpawnPoints[orientation], Quaternion.identity);
+            Instantiate(item, GenerateSpawn(), Quaternion.identity);
         }
         for(var i = 0; i < 10; i++)
         {
@@ -65,5 +73,14 @@ public class Truck : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         
         Destroy(this.gameObject);
+    }
+
+    
+    Vector3 GenerateSpawn ()
+    {
+        Vector3 offset = new Vector3(Random.Range(-1, 1), Random.Range(-1, 1), 0);
+        Vector3 itemSpawn = itemSpawnPoints[orientation] + offset;
+
+        return itemSpawn;
     }
 }
