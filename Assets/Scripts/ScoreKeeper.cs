@@ -6,10 +6,19 @@ using TMPro;
 
 public class ScoreKeeper : MonoBehaviour
 {
+/*********
+*VARIABLES
+**********/
+
     public static ScoreKeeper instance;
 
     public int highScore;
     [SerializeField] TextMeshProUGUI highScoreText;
+
+
+/*********
+*FUNCTIONS
+**********/
 
     void Awake() 
     {

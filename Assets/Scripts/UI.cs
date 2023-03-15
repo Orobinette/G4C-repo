@@ -6,12 +6,21 @@ using TMPro;
 
 public class UI : MonoBehaviour
 {
+/*********
+*VARIABLES
+**********/
+
     [SerializeField] TextMeshProUGUI highScoreText;
     
     GameObject scoreKeeperObj;
     ScoreKeeper scoreKeeper;
 
     Scene currentScene;
+
+
+/*********
+*FUNCTIONS
+**********/
 
     void Start() 
     {
