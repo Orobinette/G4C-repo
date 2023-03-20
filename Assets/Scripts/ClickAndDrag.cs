@@ -17,7 +17,7 @@ public class ClickAndDrag : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Collider2D targetObject = Physics2D.OverlapPoint(mousePosition);
-            if (targetObject)
+            if (targetObject && targetObject.tag != "bin")
             {
                 selectedObject = targetObject.transform.gameObject;
 

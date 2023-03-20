@@ -15,6 +15,7 @@ public class Buttons : MonoBehaviour
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Collider2D targetObject = Physics2D.OverlapPoint(mousePosition);
+        
         if (targetObject)
         {
             button.image.sprite = hoverSprite;
