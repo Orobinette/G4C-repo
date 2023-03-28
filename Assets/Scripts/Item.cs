@@ -18,7 +18,7 @@ public class Item : MonoBehaviour
         camera = Camera.main;
         clickAndDrag = camera.GetComponent<ClickAndDrag>();
 
-        gameManagerObj = GameObject.FindWithTag("GameController");
+        gameManagerObj = GameObject.FindWithTag("LevelController");
         gameManager = gameManagerObj.GetComponent<GameManager>();
     }
 

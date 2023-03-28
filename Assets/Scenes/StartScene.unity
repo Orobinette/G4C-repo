@@ -352,10 +352,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1152697069}
   - component: {fileID: 1152697068}
-  - component: {fileID: 1152697071}
   - component: {fileID: 1152697070}
   m_Layer: 0
-  m_Name: Game Manager
+  m_Name: GameController
   m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -388,22 +387,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1152697070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1152697067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b665c8511737c204a8b33b559e7d4a01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextScene: 
---- !u!114 &1152697071
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -415,8 +401,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dd56b3dbd5a4da4884624f6316ee024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneManagement: {fileID: 1152697070}
   highScoreText: {fileID: 843125939}
+  nextScene: 
 --- !u!1 &1330933794
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,7 +634,7 @@ RectTransform:
   - {fileID: 843125941}
   - {fileID: 1330933795}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -739,8 +725,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1152697071}
-        m_TargetAssemblyTypeName: UI, Assembly-CSharp
+      - m_Target: {fileID: 1152697070}
+        m_TargetAssemblyTypeName: SceneManagement, Assembly-CSharp
         m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:

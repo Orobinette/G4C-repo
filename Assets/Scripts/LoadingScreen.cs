@@ -28,7 +28,6 @@ public class LoadingScreen : MonoBehaviour
             slider.value += Random.Range(0.05f, 0.1f);
         }
 
-        Debug.Log(sceneManagement.nextScene);
         SceneManager.LoadScene(sceneManagement.nextScene);
     }
 }

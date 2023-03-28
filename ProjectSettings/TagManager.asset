@@ -10,7 +10,7 @@ TagManager:
   - hazard
   - trash
   - bin
-  - ScoreKeeper
+  - LevelController
   layers:
   - Default
   - TransparentFX

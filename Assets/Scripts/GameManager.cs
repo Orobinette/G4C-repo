@@ -13,7 +13,8 @@ public class GameManager : MonoBehaviour
 
     //Class References
     ScoreKeeper scoreKeeper;
-    GameObject scoreKeeperObj;
+    SceneManagement sceneManagement;
+    GameObject gameControllerObj;
 
     [SerializeField] Audio audio;
 
@@ -48,8 +49,9 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score: 0";
         timerText.text = "Timer: 60";
 
-        scoreKeeperObj = GameObject.FindWithTag("ScoreKeeper");
-        scoreKeeper = scoreKeeperObj.GetComponent<ScoreKeeper>();
+        gameControllerObj = GameObject.FindWithTag("GameController");
+        scoreKeeper = gameControllerObj.GetComponent<ScoreKeeper>();
+        sceneManagement = gameControllerObj.GetComponent<SceneManagement>();
     }
 
     void Update() 
@@ -133,12 +135,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void EndGame() 
+    public void EndGame() 
     {
-        SceneManager.LoadScene("GameOverScene");
         if(score > scoreKeeper.highScore)
         {
             scoreKeeper.highScore = score;
         }
+
+        SceneManager.LoadScene("LoadingScene");
+        sceneManagement.nextScene = "GameOverScene";
     }
 }
