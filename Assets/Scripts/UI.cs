@@ -9,11 +9,11 @@ public class UI : MonoBehaviour
 /*********
 *VARIABLES
 **********/
-    [SerializeField] GameManager gameManager;
+    [SerializeField] SceneManagement sceneManagement;
 
     [SerializeField] TextMeshProUGUI highScoreText;
     
-    GameObject scoreKeeperObj;
+    GameObject gameManagerObj;
     ScoreKeeper scoreKeeper;
 
     Scene currentScene;
@@ -28,8 +28,8 @@ public class UI : MonoBehaviour
         currentScene = SceneManager.GetActiveScene();
         if(currentScene.buildIndex == 0)
         {
-            scoreKeeperObj = GameObject.FindWithTag("ScoreKeeper");
-            scoreKeeper = scoreKeeperObj.GetComponent<ScoreKeeper>();
+            gameManagerObj = GameObject.FindWithTag("GameController");
+            scoreKeeper = gameManagerObj.GetComponent<ScoreKeeper>();
 
             highScoreText.text = "HighScore: " + scoreKeeper.highScore.ToString();
         }
@@ -39,11 +39,13 @@ public class UI : MonoBehaviour
     
     public void StartGame() 
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("LoadingScene");
+        sceneManagement.nextScene = "MainScene";
     }
 
     public void LoadMainMenu()
     {
-        SceneManager.LoadScene("StartScene");
+        SceneManager.LoadScene("LoadingScene");
+        sceneManagement.nextScene = "StartScene";
     }
 }
