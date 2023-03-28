@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using TMPro;
 
 public class GameManager : MonoBehaviour
@@ -19,8 +20,12 @@ public class GameManager : MonoBehaviour
     //Script References
     [SerializeField] List<GameObject> truckList = new List<GameObject>();
 
+    //UI
     public int score = 0;
     public TextMeshProUGUI scoreText;
+
+    [SerializeField] GameObject pauseMenu;
+    bool gameIsPaused = false;
 
     //Timer
     int time = 60; 
@@ -45,6 +50,14 @@ public class GameManager : MonoBehaviour
 
         scoreKeeperObj = GameObject.FindWithTag("ScoreKeeper");
         scoreKeeper = scoreKeeperObj.GetComponent<ScoreKeeper>();
+    }
+
+    void Update() 
+    {
+        if(Input.GetKey(KeyCode.Escape))
+        {
+            Pause(true);
+        }
     }
 
     IEnumerator SpawnTruck() 
@@ -103,6 +116,20 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(1f);
 
             EndGame();
+        }
+    }
+
+    public void Pause(bool paused) 
+    {
+        if(paused) 
+        {
+            pauseMenu.SetActive(true);
+            Time.timeScale = 0;
+        }
+        else
+        {
+            pauseMenu.SetActive(false);
+            Time.timeScale = 1;
         }
     }
 

@@ -9,6 +9,7 @@ public class UI : MonoBehaviour
 /*********
 *VARIABLES
 **********/
+    [SerializeField] GameManager gameManager;
 
     [SerializeField] TextMeshProUGUI highScoreText;
     
@@ -35,6 +36,7 @@ public class UI : MonoBehaviour
 
     }
 
+    
     public void StartGame() 
     {
         SceneManager.LoadScene("MainScene");

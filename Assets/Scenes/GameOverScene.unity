@@ -291,7 +291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 1178186613}
   hoverSprite: {fileID: 1623451099, guid: 768b99845aa153044b8dca7c1350fd33, type: 3}
-  defaultSprite: {fileID: -1504061755, guid: 768b99845aa153044b8dca7c1350fd33, type: 3}
+  defaultSprite: {fileID: -511244533, guid: 768b99845aa153044b8dca7c1350fd33, type: 3}
 --- !u!61 &467647477
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -415,6 +415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dd56b3dbd5a4da4884624f6316ee024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   highScoreText: {fileID: 0}
 --- !u!1 &816150298
 GameObject:
