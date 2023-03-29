@@ -12,7 +12,7 @@ public class SceneManagement : MonoBehaviour
     [SerializeField] TextMeshProUGUI highScoreText;
     
     GameObject gameManagerObj;
-    ScoreKeeper scoreKeeper;
+    GlobalVariables globalVariables;
 
     Scene currentScene;
 
@@ -29,9 +29,9 @@ public class SceneManagement : MonoBehaviour
         if(currentScene.buildIndex == 0)
         {
             gameManagerObj = GameObject.FindWithTag("GameController");
-            scoreKeeper = gameManagerObj.GetComponent<ScoreKeeper>();
+            globalVariables = gameManagerObj.GetComponent<GlobalVariables>();
 
-            highScoreText.text = "HighScore: " + scoreKeeper.highScore.ToString();
+            highScoreText.text = "HighScore: " + globalVariables.highScore.ToString();
         }
 
     }

@@ -4,16 +4,18 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class ScoreKeeper : MonoBehaviour
+public class GlobalVariables : MonoBehaviour
 {
 /*********
 *VARIABLES
 **********/
 
-    public static ScoreKeeper instance;
+    public static GlobalVariables instance;
 
     public int highScore;
     [SerializeField] TextMeshProUGUI highScoreText;
+
+    public bool muted = false;
 
 
 /*********

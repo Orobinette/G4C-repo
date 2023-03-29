@@ -7,8 +7,8 @@ public class Buttons : MonoBehaviour
 {
     [SerializeField] Button button;
 
-    [SerializeField] Sprite hoverSprite;
-    [SerializeField] Sprite defaultSprite;
+    public Sprite defaultSprite;
+    public Sprite hoverSprite;
 
     
     void Update() 
@@ -24,6 +24,5 @@ public class Buttons : MonoBehaviour
         {
             button.image.sprite = defaultSprite;
         }
-        
-    }
+    }   
 }

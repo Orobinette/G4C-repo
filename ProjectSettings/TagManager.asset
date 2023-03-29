@@ -11,6 +11,7 @@ TagManager:
   - trash
   - bin
   - LevelController
+  - item
   layers:
   - Default
   - TransparentFX

@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
 **********/
 
     //Class References
-    ScoreKeeper scoreKeeper;
+    GlobalVariables globalVariables;
     SceneManagement sceneManagement;
     GameObject gameControllerObj;
 
@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
         timerText.text = "Timer: 60";
 
         gameControllerObj = GameObject.FindWithTag("GameController");
-        scoreKeeper = gameControllerObj.GetComponent<ScoreKeeper>();
+        globalVariables = gameControllerObj.GetComponent<GlobalVariables>();
         sceneManagement = gameControllerObj.GetComponent<SceneManagement>();
     }
 
@@ -137,9 +137,9 @@ public class GameManager : MonoBehaviour
 
     public void EndGame() 
     {
-        if(score > scoreKeeper.highScore)
+        if(score > globalVariables.highScore)
         {
-            scoreKeeper.highScore = score;
+            globalVariables.highScore = score;
         }
 
         SceneManager.LoadScene("LoadingScene");
