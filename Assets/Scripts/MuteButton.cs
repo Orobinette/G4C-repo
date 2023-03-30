@@ -9,7 +9,7 @@ public class MuteButton : MonoBehaviour
 **********/
 
     //Class References
-    [SerializeField] AudioSource audio;
+    AudioSource audio;
     [SerializeField] Buttons buttons;
 
     GlobalVariables globalVariables;
@@ -33,10 +33,12 @@ public class MuteButton : MonoBehaviour
     {
         gameControllerObj = GameObject.FindWithTag("GameController");
         globalVariables = gameControllerObj.GetComponent<GlobalVariables>();
+        audio = gameControllerObj.GetComponent<AudioSource>();
     }
 
     void Update() 
     {
+        
         if(globalVariables.muted) 
         {
             buttons.defaultSprite = muteSprite;
@@ -47,8 +49,8 @@ public class MuteButton : MonoBehaviour
             buttons.defaultSprite = defaultSprite;
             buttons.hoverSprite = hoverSprite;
         
-        }
-            
+        }    
+          
     }
 
     public void Mute() 

@@ -5,24 +5,27 @@ using UnityEngine.UI;
 
 public class Buttons : MonoBehaviour
 {
+/*********
+*VARIABLES
+*********/
+
     [SerializeField] Button button;
 
     public Sprite defaultSprite;
     public Sprite hoverSprite;
 
-    
-    void Update() 
+
+/*********
+*FUNCTIONS
+**********/
+
+    public void Hovering()
     {
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Collider2D targetObject = Physics2D.OverlapPoint(mousePosition);
-        
-        if (targetObject)
-        {
-            button.image.sprite = hoverSprite;
-        }
-        else
-        {
-            button.image.sprite = defaultSprite;
-        }
-    }   
+        button.image.sprite = hoverSprite;
+    }
+    public void NotHovering() 
+    {
+        button.image.sprite = defaultSprite;
+    }
 }
+
