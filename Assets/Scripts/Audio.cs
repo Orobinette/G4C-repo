@@ -10,8 +10,7 @@ public class Audio : MonoBehaviour
     public AudioClip positiveSound;
     public AudioClip negativeSound;
 
-
-    public void PointSound(string type) 
+    public void PlayPointSound(string type) 
     {
         if(type == "positive")
         {

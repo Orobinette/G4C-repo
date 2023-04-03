@@ -48,4 +48,14 @@ public class SceneManagement : MonoBehaviour
         SceneManager.LoadScene("LoadingScene");
         nextScene = "StartScene";
     }
+
+    public void LoadOptionsMenu() 
+    {
+        SceneManager.LoadScene("OptionsScene");
+    }
+
+    public void LoadAboutMenu() 
+    {
+        SceneManager.LoadScene("AboutScene");
+    }
 }

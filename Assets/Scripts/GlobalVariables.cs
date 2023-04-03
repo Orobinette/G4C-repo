@@ -16,6 +16,7 @@ public class GlobalVariables : MonoBehaviour
     [SerializeField] TextMeshProUGUI highScoreText;
 
     public bool muted = false;
+    public float volume;
 
 
 /*********

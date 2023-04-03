@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     SceneManagement sceneManagement;
     GameObject gameControllerObj;
 
-    [SerializeField] Audio audio;
+    Audio audio;
 
     //Script References
     [SerializeField] List<GameObject> truckList = new List<GameObject>();
@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
         gameControllerObj = GameObject.FindWithTag("GameController");
         globalVariables = gameControllerObj.GetComponent<GlobalVariables>();
         sceneManagement = gameControllerObj.GetComponent<SceneManagement>();
+        audio = gameControllerObj.GetComponent<Audio>();
     }
 
     void Update() 
@@ -83,11 +84,11 @@ public class GameManager : MonoBehaviour
 
         if(scoreModifier > 0)
         {
-            audio.PointSound("positive");
+            audio.PlayPointSound("positive");
         }
         else
         {
-            audio.PointSound("negative");
+            audio.PlayPointSound("negative");
         }
         
     }

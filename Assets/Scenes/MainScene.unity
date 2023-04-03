@@ -507,7 +507,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 693468500}
         m_TargetAssemblyTypeName: MuteButton, Assembly-CSharp
         m_MethodName: Mute
         m_Mode: 1
@@ -539,7 +539,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1861570320, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
+  m_Sprite: {fileID: -320298442, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -590,10 +590,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttons: {fileID: 693468501}
-  muteSprite: {fileID: 89575311, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
-  hoverMuteSprite: {fileID: -263351307, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
-  defaultSprite: {fileID: 1861570320, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
-  hoverSprite: {fileID: 801987623, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
+  muteSprite: {fileID: -1716333475, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
+  hoverMuteSprite: {fileID: -1591012082, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
+  defaultSprite: {fileID: -320298442, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
+  hoverSprite: {fileID: -768254602, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
 --- !u!114 &693468501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -607,8 +607,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 693468496}
-  defaultSprite: {fileID: 1861570320, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
-  hoverSprite: {fileID: 801987623, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
+  defaultSprite: {fileID: -320298442, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
+  hoverSprite: {fileID: -768254602, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
 --- !u!114 &693468502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -748,7 +748,6 @@ GameObject:
   m_Component:
   - component: {fileID: 728835777}
   - component: {fileID: 728835776}
-  - component: {fileID: 728835779}
   - component: {fileID: 728835775}
   m_Layer: 0
   m_Name: GameManager
@@ -769,7 +768,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a3beea964251e445bdb6a13e449773c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audio: {fileID: 728835779}
   truckList:
   - {fileID: 5431684084294920121, guid: 9ac13de420afec84cb8ac62c1204aeba, type: 3}
   - {fileID: 6762314106284228296, guid: 4cadd050bd11ba94a9d9cef7ad283c72, type: 3}
@@ -807,21 +805,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &728835779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 728835774}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 826c7b22cfb0c7840b663df7866a9d53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  positiveSound: {fileID: 8300000, guid: 8a87c6141e85d8b4bb6cea2912c7f412, type: 3}
-  negativeSound: {fileID: 8300000, guid: f6b274d004495f84d97c936ca7f3350f, type: 3}
 --- !u!1 &755670989
 GameObject:
   m_ObjectHideFlags: 0
@@ -1542,9 +1525,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 728835775}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: EndGame
+      - m_Target: {fileID: 1311790431}
+        m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
+        m_MethodName: LoadMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1574,7 +1557,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -374939384, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
+  m_Sprite: {fileID: 1861570320, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1625,8 +1608,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1311790427}
-  defaultSprite: {fileID: -374939384, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
-  hoverSprite: {fileID: -674918462, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
+  defaultSprite: {fileID: 1861570320, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
+  hoverSprite: {fileID: 801987623, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
 --- !u!114 &1311790432
 MonoBehaviour:
   m_ObjectHideFlags: 0
