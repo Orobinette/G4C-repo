@@ -26,7 +26,7 @@ public class MenuAnimation : MonoBehaviour
 
     void Start() 
     {
-        InvokeRepeating("SpawnTruck", 3f, 5f);
+        InvokeRepeating("SpawnTruck", 0f, Random.Range(3f, 5f));
     }
 
     void FixedUpdate() 
@@ -46,8 +46,8 @@ public class MenuAnimation : MonoBehaviour
 
     void SpawnTruck() 
     {
-        truckType = Random.Range(0, 8);
-        if(truckType % 2 == 0)
+        truckType = Random.Range(0, 7);
+        if(truckType < 4)
         {
             spawnPoint = new Vector3(10f, -4f, 0f);
             direction = new Vector3(-1f, -0f, 0f);
