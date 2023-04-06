@@ -458,7 +458,7 @@ GameObject:
   - component: {fileID: 693468500}
   m_Layer: 5
   m_Name: Mute Button
-  m_TagString: Untagged
+  m_TagString: Mute Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -510,6 +510,18 @@ MonoBehaviour:
       - m_Target: {fileID: 693468500}
         m_TargetAssemblyTypeName: MuteButton, Assembly-CSharp
         m_MethodName: Mute
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 693468501}
+        m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
+        m_MethodName: ChangeSprite
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -609,6 +621,10 @@ MonoBehaviour:
   button: {fileID: 693468496}
   defaultSprite: {fileID: -320298442, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
   hoverSprite: {fileID: -768254602, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
+  mutedSprite: {fileID: -1716333475, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
+  mutedHoverSprite: {fileID: -1591012082, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
+  unmutedSprite: {fileID: -320298442, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
+  unmutedHoverSprite: {fileID: -768254602, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
 --- !u!114 &693468502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -955,6 +971,10 @@ MonoBehaviour:
   button: {fileID: 755670990}
   defaultSprite: {fileID: -1947422090, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
   hoverSprite: {fileID: -1820375057, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
+  mutedSprite: {fileID: 0}
+  mutedHoverSprite: {fileID: 0}
+  unmutedSprite: {fileID: 0}
+  unmutedHoverSprite: {fileID: 0}
 --- !u!114 &755670995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1557,7 +1577,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1861570320, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
+  m_Sprite: {fileID: -299046135, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1608,8 +1628,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1311790427}
-  defaultSprite: {fileID: 1861570320, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
-  hoverSprite: {fileID: 801987623, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
+  defaultSprite: {fileID: -299046135, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
+  hoverSprite: {fileID: 114852162, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
+  mutedSprite: {fileID: 0}
+  mutedHoverSprite: {fileID: 0}
+  unmutedSprite: {fileID: 0}
+  unmutedHoverSprite: {fileID: 0}
 --- !u!114 &1311790432
 MonoBehaviour:
   m_ObjectHideFlags: 0

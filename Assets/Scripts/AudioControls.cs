@@ -1,33 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class MuteButton : MonoBehaviour
+public class AudioControls : MonoBehaviour
 {
-/**********
+/*********
 *VARIABLES
 **********/
 
     //Class References
-    AudioSource audioSource;
-    AudioSource soundAudio;
-    [SerializeField] Buttons buttons;
-
-    GlobalVariables globalVariables;
-    Audio audio;
     GameObject gameControllerObj;
+    GlobalVariables globalVariables;
+    AudioSource audioSource;
 
-    //Sprites
-    [SerializeField] Sprite muteSprite;
-    [SerializeField] Sprite hoverMuteSprite;
+    //Other
+    [SerializeField] Slider effectSlider;
+    
 
-    [SerializeField] Sprite defaultSprite;
-    [SerializeField] Sprite hoverSprite;
-
-    bool muted = false;
-
-
-/**********
+/*********
 *FUNCTIONS
 **********/
 
@@ -36,21 +27,29 @@ public class MuteButton : MonoBehaviour
         gameControllerObj = GameObject.FindWithTag("GameController");
         globalVariables = gameControllerObj.GetComponent<GlobalVariables>();
         audioSource = gameControllerObj.GetComponent<AudioSource>();
-        audio = gameControllerObj.GetComponent<Audio>();
+
+        effectSlider.value = globalVariables.volume;
     }
+
+    //TODO: delete globalvariables.volume, replace in script with audiosource.volume, delete line 46 in update "audioSource..."
 
     void Update() 
     {
         if(globalVariables.muted) 
         {
-            buttons.defaultSprite = muteSprite;
-            buttons.hoverSprite = hoverMuteSprite;
+            if(effectSlider != null)
+            {
+                effectSlider.value = 0;
+            }
         }
-        else
-        {
-            buttons.defaultSprite = defaultSprite;
-            buttons.hoverSprite = hoverSprite;
-        }    
+
+        audioSource.volume = globalVariables.volume;
+    }   
+
+    public void UpdateSlider() 
+    {
+        audioSource.volume = effectSlider.value;
+        globalVariables.volume = effectSlider.value;
     }
 
     public void Mute() 
@@ -65,6 +64,11 @@ public class MuteButton : MonoBehaviour
         {
             globalVariables.volume = globalVariables.lastVolume;
             globalVariables.muted = false;
+
+            if(effectSlider != null)
+            {
+                effectSlider.value = globalVariables.lastVolume;
+            }
         }
     }
 }

@@ -12,6 +12,7 @@ TagManager:
   - bin
   - LevelController
   - item
+  - Mute Button
   layers:
   - Default
   - TransparentFX

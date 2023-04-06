@@ -17,6 +17,7 @@ public class GlobalVariables : MonoBehaviour
 
     public bool muted = false;
     public float volume;
+    public float lastVolume;
 
 
 /*********
@@ -38,5 +39,7 @@ public class GlobalVariables : MonoBehaviour
     void Start() 
     {
         highScoreText.text = instance.highScore.ToString();
+
+        volume = 1;
     }
 }
