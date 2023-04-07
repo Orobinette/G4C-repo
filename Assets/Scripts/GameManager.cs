@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
 
     //Class References
     GlobalVariables globalVariables;
-    SceneManagement sceneManagement;
     GameObject gameControllerObj;
 
     Audio audio;
@@ -51,7 +50,6 @@ public class GameManager : MonoBehaviour
 
         gameControllerObj = GameObject.FindWithTag("GameController");
         globalVariables = gameControllerObj.GetComponent<GlobalVariables>();
-        sceneManagement = gameControllerObj.GetComponent<SceneManagement>();
         audio = gameControllerObj.GetComponent<Audio>();
     }
 
@@ -144,6 +142,5 @@ public class GameManager : MonoBehaviour
         }
 
         SceneManager.LoadScene("LoadingScene");
-        sceneManagement.nextScene = "GameOverScene";
     }
 }

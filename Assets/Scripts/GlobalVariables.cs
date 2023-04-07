@@ -38,7 +38,7 @@ public class GlobalVariables : MonoBehaviour
 
     void Start() 
     {
-        highScoreText.text = instance.highScore.ToString();
+        //highScoreText.text = instance.highScore.ToString();
 
         volume = 1;
     }

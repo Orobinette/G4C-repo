@@ -225,6 +225,10 @@ MonoBehaviour:
   button: {fileID: 202114494}
   defaultSprite: {fileID: -271392291, guid: 768b99845aa153044b8dca7c1350fd33, type: 3}
   hoverSprite: {fileID: -2066767907, guid: 768b99845aa153044b8dca7c1350fd33, type: 3}
+  mutedSprite: {fileID: 0}
+  mutedHoverSprite: {fileID: 0}
+  unmutedSprite: {fileID: 0}
+  unmutedHoverSprite: {fileID: 0}
 --- !u!61 &202114493
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -297,14 +301,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 202114492}
         m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
-        m_MethodName: LoadAboutMenu
-        m_Mode: 1
+        m_MethodName: ChangeScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: AboutScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &202114495
@@ -531,6 +535,10 @@ MonoBehaviour:
   button: {fileID: 320673207}
   defaultSprite: {fileID: -1806433828, guid: 768b99845aa153044b8dca7c1350fd33, type: 3}
   hoverSprite: {fileID: 1434978500, guid: 768b99845aa153044b8dca7c1350fd33, type: 3}
+  mutedSprite: {fileID: 0}
+  mutedHoverSprite: {fileID: 0}
+  unmutedSprite: {fileID: 0}
+  unmutedHoverSprite: {fileID: 0}
 --- !u!61 &320673206
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -603,14 +611,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 320673205}
         m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
-        m_MethodName: LoadOptionsMenu
-        m_Mode: 1
+        m_MethodName: ChangeScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: OptionsScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &320673208
@@ -748,6 +756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f911bf1dd513ec438ab035451f7aa8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highScoreText: {fileID: 843125939}
   truckPrefab: {fileID: 7516299803109872029, guid: e63edf0416bd52d41a2c83a2d0c8735e, type: 3}
   truckSprites:
   - {fileID: -1256152972, guid: 485acaaf1aaae2444a0783cd62b55f50, type: 3}
@@ -929,6 +938,7 @@ MonoBehaviour:
   highScoreText: {fileID: 843125939}
   muted: 0
   volume: 0
+  lastVolume: 0
 --- !u!4 &1152697069
 Transform:
   m_ObjectHideFlags: 0
@@ -956,8 +966,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dd56b3dbd5a4da4884624f6316ee024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highScoreText: {fileID: 843125939}
-  nextScene: 
 --- !u!82 &1152697071
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1397,14 +1405,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1448291702}
         m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
-        m_MethodName: StartGame
-        m_Mode: 1
+        m_MethodName: ChangeScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: MainScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1448291697
@@ -1531,6 +1539,10 @@ MonoBehaviour:
   button: {fileID: 1448291696}
   defaultSprite: {fileID: -542483236, guid: 768b99845aa153044b8dca7c1350fd33, type: 3}
   hoverSprite: {fileID: -1504061755, guid: 768b99845aa153044b8dca7c1350fd33, type: 3}
+  mutedSprite: {fileID: 0}
+  mutedHoverSprite: {fileID: 0}
+  unmutedSprite: {fileID: 0}
+  unmutedHoverSprite: {fileID: 0}
 --- !u!1 &1599112933
 GameObject:
   m_ObjectHideFlags: 0

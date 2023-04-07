@@ -1,12 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class MenuAnimation : MonoBehaviour
 {
 /*********
 *VARIABLES
 **********/
+
+    GameObject gameControllerObj;
+    GlobalVariables globalVariables;
+
+    [SerializeField] TMP_Text highScoreText;
 
     GameObject truck;
     [SerializeField] GameObject truckPrefab;
@@ -27,6 +33,10 @@ public class MenuAnimation : MonoBehaviour
     void Start() 
     {
         InvokeRepeating("SpawnTruck", 0f, Random.Range(3f, 5f));
+
+        gameControllerObj = GameObject.FindWithTag("GameController");
+        globalVariables = gameControllerObj.GetComponent<GlobalVariables>();
+        highScoreText.text = "HighScore: " + globalVariables.highScore.ToString();
     }
 
     void FixedUpdate() 

@@ -8,26 +8,19 @@ public class LoadingScreen : MonoBehaviour
 {
     [SerializeField] Slider slider;
 
-    GameObject gameManagerObj;
-    SceneManagement sceneManagement;
-
     void Start() 
     {
         slider.value = 0;
-        StartCoroutine("Load");
-
-        gameManagerObj = GameObject.FindWithTag("GameController");
-        sceneManagement = gameManagerObj.GetComponent<SceneManagement>();
+        Load();
     }
 
-    IEnumerator Load()
+    void Load()
     {
         while(slider.value < 1)
         {
-            yield return new WaitForSeconds(Random.Range(0.1f, 0.5f));
-            slider.value += Random.Range(0.05f, 0.1f);
+            slider.value += 0.01f;
         }
 
-        SceneManager.LoadScene(sceneManagement.nextScene);
+        SceneManager.LoadScene("StartScene");
     }
 }

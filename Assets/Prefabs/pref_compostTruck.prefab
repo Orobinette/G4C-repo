@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: -8864317641159864291}
   - component: {fileID: -3106863632600433901}
   - component: {fileID: 4587323305605469278}
-  - component: {fileID: -5420609993086236458}
   m_Layer: 0
   m_Name: pref_compostTruck
   m_TagString: Untagged
@@ -129,20 +128,8 @@ MonoBehaviour:
   itemSpawnPoints: []
   itemList:
   - {fileID: 2814542187764048766, guid: be309d364e416b84c928c221631d0ca4, type: 3}
+  - {fileID: 2814542187764048766, guid: 7c6c11b7b3326a8449ad9a9a2f4b4b0d, type: 3}
   directionList: []
   trans: {fileID: 3244272610538462202}
   spriteRenderer: {fileID: -8864317641159864291}
   rb: {fileID: -3106863632600433901}
---- !u!114 &-5420609993086236458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6834311125955355423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d479e1a728cbf8a4899a42de1d552a2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  truck: {fileID: 4587323305605469278}

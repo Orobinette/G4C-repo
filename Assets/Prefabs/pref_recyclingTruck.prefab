@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8986932615472412094}
   - component: {fileID: 1728522568162193433}
   - component: {fileID: -6622993283661476434}
-  - component: {fileID: 1174417854250495843}
   m_Layer: 0
   m_Name: pref_recyclingTruck
   m_TagString: Untagged
@@ -135,16 +134,3 @@ MonoBehaviour:
   trans: {fileID: 5044733872396788561}
   spriteRenderer: {fileID: 8986932615472412094}
   rb: {fileID: 1728522568162193433}
---- !u!114 &1174417854250495843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6762314106284228296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d479e1a728cbf8a4899a42de1d552a2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  truck: {fileID: -6622993283661476434}
