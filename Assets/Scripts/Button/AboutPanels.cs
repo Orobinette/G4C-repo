@@ -15,21 +15,29 @@ public class AboutPanels : MonoBehaviour
 
     public void Forward() 
     {
-        if(i < panelList.Count)
+        panelList[i].SetActive(false);
+        if(i < panelList.Count - 1)
         {
-            panelList[i].SetActive(false);
             i++;
-            panelList[i].SetActive(true);
         }
+        else
+        {
+            i = 0;
+        }
+        panelList[i].SetActive(true);
     }
 
     public void Back() 
     {
+        panelList[i].SetActive(false);
         if(i > 0)
         {
-            panelList[i].SetActive(false);
             i--;
-            panelList[i].SetActive(true);
         }
+        else
+        {
+            i = panelList.Count - 1;
+        }
+        panelList[i].SetActive(true);
     }
 }
