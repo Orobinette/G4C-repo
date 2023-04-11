@@ -11,12 +11,12 @@ public class GlobalVariables : MonoBehaviour
 **********/
 
     public static GlobalVariables instance;
+    AudioSource audioSource;
 
     public int highScore;
     [SerializeField] TextMeshProUGUI highScoreText;
 
-    public bool muted = false;
-    public float volume;
+    public bool muted;
     public float lastVolume;
 
 
@@ -40,6 +40,24 @@ public class GlobalVariables : MonoBehaviour
     {
         //highScoreText.text = instance.highScore.ToString();
 
-        volume = 1;
+        lastVolume = 1;
+        muted = false;
+
+        audioSource = this.gameObject.GetComponent<AudioSource>();
+    }
+
+    public void Mute() 
+    {
+        if(!muted) 
+        {
+            lastVolume = audioSource.volume;
+            audioSource.volume = 0;
+            muted = true;
+        }
+        else 
+        {
+            audioSource.volume = lastVolume;
+            muted = false;
+        }
     }
 }

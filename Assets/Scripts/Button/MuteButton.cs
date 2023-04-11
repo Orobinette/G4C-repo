@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MuteButton : MonoBehaviour
 {
@@ -8,63 +9,49 @@ public class MuteButton : MonoBehaviour
 *VARIABLES
 **********/
 
-    //Class References
-    AudioSource audioSource;
-    AudioSource soundAudio;
+    [SerializeField] Button button;
     [SerializeField] Buttons buttons;
 
-    GlobalVariables globalVariables;
-    Audio audio;
     GameObject gameControllerObj;
+    GlobalVariables globalVariables;
 
     //Sprites
-    [SerializeField] Sprite muteSprite;
-    [SerializeField] Sprite hoverMuteSprite;
-
-    [SerializeField] Sprite defaultSprite;
-    [SerializeField] Sprite hoverSprite;
-
-    bool muted = false;
+    [SerializeField] Sprite mutedSprite;
+    [SerializeField] Sprite mutedHoverSprite;
+    [SerializeField] Sprite unmutedSprite;
+    [SerializeField] Sprite unmutedHoverSprite;
 
 
 /**********
 *FUNCTIONS
 **********/
 
-    void Start() 
+    void Start () 
     {
         gameControllerObj = GameObject.FindWithTag("GameController");
         globalVariables = gameControllerObj.GetComponent<GlobalVariables>();
-        audioSource = gameControllerObj.GetComponent<AudioSource>();
-        audio = gameControllerObj.GetComponent<Audio>();
+
+        if(globalVariables.muted)
+        {
+            ChangeSprite();
+        }
+
+        button.onClick.AddListener(globalVariables.Mute);
     }
 
-    void Update() 
+    public void ChangeSprite() 
     {
-        if(globalVariables.muted) 
+        if(globalVariables.muted)
         {
-            buttons.defaultSprite = muteSprite;
-            buttons.hoverSprite = hoverMuteSprite;
+            buttons.defaultSprite = mutedSprite;
+            buttons.hoverSprite = mutedHoverSprite;
         }
         else
         {
-            buttons.defaultSprite = defaultSprite;
-            buttons.hoverSprite = hoverSprite;
-        }    
-    }
+            buttons.defaultSprite = unmutedSprite;
+            buttons.hoverSprite = unmutedHoverSprite;
+        }
 
-    public void Mute() 
-    {
-        if(!globalVariables.muted) 
-        {
-            globalVariables.lastVolume = globalVariables.volume;
-            globalVariables.volume = 0;
-            globalVariables.muted = true;
-        }
-        else 
-        {
-            globalVariables.volume = globalVariables.lastVolume;
-            globalVariables.muted = false;
-        }
+        //button.image.sprite = buttons.defaultSprite;
     }
 }

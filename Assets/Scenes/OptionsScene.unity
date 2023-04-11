@@ -339,10 +339,6 @@ MonoBehaviour:
   button: {fileID: 320248082}
   defaultSprite: {fileID: -299046135, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
   hoverSprite: {fileID: 114852162, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
-  mutedSprite: {fileID: 0}
-  mutedHoverSprite: {fileID: 0}
-  unmutedSprite: {fileID: 0}
-  unmutedHoverSprite: {fileID: 0}
 --- !u!114 &320248081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -496,6 +492,7 @@ GameObject:
   - component: {fileID: 377300916}
   - component: {fileID: 377300915}
   - component: {fileID: 377300914}
+  - component: {fileID: 377300919}
   m_Layer: 5
   m_Name: Audio Button
   m_TagString: Mute Button
@@ -538,10 +535,6 @@ MonoBehaviour:
   button: {fileID: 377300916}
   defaultSprite: {fileID: -320298442, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
   hoverSprite: {fileID: -768254602, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
-  mutedSprite: {fileID: -1716333475, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
-  mutedHoverSprite: {fileID: -1591012082, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
-  unmutedSprite: {fileID: -320298442, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
-  unmutedHoverSprite: {fileID: -768254602, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
 --- !u!114 &377300915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -631,9 +624,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 939170396}
-        m_TargetAssemblyTypeName: AudioSliders, Assembly-CSharp
-        m_MethodName: Mute
+      - m_Target: {fileID: 377300919}
+        m_TargetAssemblyTypeName: MuteButton, Assembly-CSharp
+        m_MethodName: ChangeSprite
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -643,9 +636,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 377300914}
-        m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
-        m_MethodName: ChangeSprite
+      - m_Target: {fileID: 939170396}
+        m_TargetAssemblyTypeName: AudioControls, Assembly-CSharp
+        m_MethodName: MuteSlider
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -693,6 +686,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 377300912}
   m_CullTransparentMesh: 1
+--- !u!114 &377300919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377300912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f171d9b62453855428ca14a47398ac33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 377300916}
+  buttons: {fileID: 377300914}
+  mutedSprite: {fileID: -1716333475, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
+  mutedHoverSprite: {fileID: -1591012082, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
+  unmutedSprite: {fileID: -320298442, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
+  unmutedHoverSprite: {fileID: -768254602, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
 --- !u!1 &560939077
 GameObject:
   m_ObjectHideFlags: 0
@@ -1304,10 +1315,6 @@ MonoBehaviour:
   button: {fileID: 1296771896}
   defaultSprite: {fileID: 1861570320, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
   hoverSprite: {fileID: 801987623, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
-  mutedSprite: {fileID: 89575311, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
-  mutedHoverSprite: {fileID: -263351307, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
-  unmutedSprite: {fileID: 1861570320, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
-  unmutedHoverSprite: {fileID: 801987623, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
 --- !u!114 &1296771895
 MonoBehaviour:
   m_ObjectHideFlags: 0

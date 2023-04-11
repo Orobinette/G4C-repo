@@ -28,47 +28,24 @@ public class AudioControls : MonoBehaviour
         globalVariables = gameControllerObj.GetComponent<GlobalVariables>();
         audioSource = gameControllerObj.GetComponent<AudioSource>();
 
-        effectSlider.value = globalVariables.volume;
-    }
-
-    //TODO: delete globalvariables.volume, replace in script with audiosource.volume, delete line 46 in update "audioSource..."
-
-    void Update() 
-    {
-        if(globalVariables.muted) 
-        {
-            if(effectSlider != null)
-            {
-                effectSlider.value = 0;
-            }
-        }
-
-        audioSource.volume = globalVariables.volume;
-    }   
+        
+        MuteSlider();
+    }  
 
     public void UpdateSlider() 
     {
         audioSource.volume = effectSlider.value;
-        globalVariables.volume = effectSlider.value;
     }
 
-    public void Mute() 
+    public void MuteSlider() 
     {
-        if(!globalVariables.muted) 
+        if(globalVariables.muted)
         {
-            globalVariables.lastVolume = globalVariables.volume;
-            globalVariables.volume = 0;
-            globalVariables.muted = true;
+            effectSlider.value = 0;
         }
-        else 
+        else  
         {
-            globalVariables.volume = globalVariables.lastVolume;
-            globalVariables.muted = false;
-
-            if(effectSlider != null)
-            {
-                effectSlider.value = globalVariables.lastVolume;
-            }
+            effectSlider.value = globalVariables.lastVolume; 
         }
     }
 }
