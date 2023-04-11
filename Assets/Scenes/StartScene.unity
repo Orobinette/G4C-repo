@@ -225,10 +225,6 @@ MonoBehaviour:
   button: {fileID: 202114494}
   defaultSprite: {fileID: -271392291, guid: 768b99845aa153044b8dca7c1350fd33, type: 3}
   hoverSprite: {fileID: -2066767907, guid: 768b99845aa153044b8dca7c1350fd33, type: 3}
-  mutedSprite: {fileID: 0}
-  mutedHoverSprite: {fileID: 0}
-  unmutedSprite: {fileID: 0}
-  unmutedHoverSprite: {fileID: 0}
 --- !u!61 &202114493
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -535,10 +531,6 @@ MonoBehaviour:
   button: {fileID: 320673207}
   defaultSprite: {fileID: -1806433828, guid: 768b99845aa153044b8dca7c1350fd33, type: 3}
   hoverSprite: {fileID: 1434978500, guid: 768b99845aa153044b8dca7c1350fd33, type: 3}
-  mutedSprite: {fileID: 0}
-  mutedHoverSprite: {fileID: 0}
-  unmutedSprite: {fileID: 0}
-  unmutedHoverSprite: {fileID: 0}
 --- !u!61 &320673206
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -937,7 +929,6 @@ MonoBehaviour:
   highScore: 0
   highScoreText: {fileID: 843125939}
   muted: 0
-  volume: 0
   lastVolume: 0
 --- !u!4 &1152697069
 Transform:
@@ -1539,10 +1530,6 @@ MonoBehaviour:
   button: {fileID: 1448291696}
   defaultSprite: {fileID: -542483236, guid: 768b99845aa153044b8dca7c1350fd33, type: 3}
   hoverSprite: {fileID: -1504061755, guid: 768b99845aa153044b8dca7c1350fd33, type: 3}
-  mutedSprite: {fileID: 0}
-  mutedHoverSprite: {fileID: 0}
-  unmutedSprite: {fileID: 0}
-  unmutedHoverSprite: {fileID: 0}
 --- !u!1 &1599112933
 GameObject:
   m_ObjectHideFlags: 0

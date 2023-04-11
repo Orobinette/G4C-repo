@@ -20,8 +20,7 @@ public class BinController : MonoBehaviour
     [SerializeField] SpriteRenderer binRenderer; //Sprite Renderer
     [SerializeField] List<Sprite> spriteList = new List<Sprite>(); //Possible Sprites
 
-    //Object References
-    GameObject gameManagerObj; ObsGameManager gameManager; //GameManager References
+    
     GameObject playerObj; PlayerMovement playerMovement; //Player References
 
     //Script Variables
@@ -37,6 +36,7 @@ public class BinController : MonoBehaviour
 
     //Built-In Functions
 
+/*
     void Start() 
     {
         //Establish object and script references
@@ -103,4 +103,6 @@ public class BinController : MonoBehaviour
             }
         }
     }
+
+    */
 }
