@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
 
     [SerializeField] GameObject pauseMenu;
-    bool gameIsPaused = false;
+    bool paused;
 
     //Timer
     int time = 60; 
@@ -51,13 +51,15 @@ public class GameManager : MonoBehaviour
         gameControllerObj = GameObject.FindWithTag("GameController");
         globalVariables = gameControllerObj.GetComponent<GlobalVariables>();
         audio = gameControllerObj.GetComponent<Audio>();
+
+        paused = false;
     }
 
     void Update() 
     {
-        if(Input.GetKey(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape))
         {
-            Pause(true);
+            Pause();
         }
     }
 
@@ -120,17 +122,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void Pause(bool paused) 
+    public void Pause() 
     {
-        if(paused) 
+        if(!paused) 
         {
             pauseMenu.SetActive(true);
             Time.timeScale = 0;
+
+            paused = true;
         }
         else
         {
             pauseMenu.SetActive(false);
             Time.timeScale = 1;
+
+            paused = false;
         }
     }
 
