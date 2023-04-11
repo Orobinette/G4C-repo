@@ -19,6 +19,8 @@ public class GlobalVariables : MonoBehaviour
     public bool muted;
     public float lastVolume;
 
+    public string difficulty;
+
 
 /*********
 *FUNCTIONS
@@ -59,5 +61,10 @@ public class GlobalVariables : MonoBehaviour
             audioSource.volume = lastVolume;
             muted = false;
         }
+    }
+
+    public void SetDifficulty(string _difficulty) 
+    {   
+        difficulty = _difficulty;
     }
 }

@@ -8,11 +8,17 @@ public class Truck : MonoBehaviour
 *VARIABLES
 **********/
 
+    //Class References
+    GameObject gameControllerObj;
+    GlobalVariables globalVariables;
+
+    //Script Variables
     [SerializeField] List<Sprite> spriteList = new List<Sprite>();
     [SerializeField] List<Vector3> spawnPointList = new List<Vector3>();
+    [SerializeField] List<Vector3> directionList = new List<Vector3>();
+
     [SerializeField] List<Vector3> itemSpawnPoints = new List<Vector3>();
     [SerializeField] List<GameObject> itemList = new List<GameObject>();
-    [SerializeField] List<Vector3> directionList = new List<Vector3>();
 
     [SerializeField] Transform trans;
     [SerializeField] SpriteRenderer spriteRenderer;
@@ -58,6 +64,7 @@ public class Truck : MonoBehaviour
 
         StartCoroutine("SpawnItem");
     }
+
 
     IEnumerator SpawnItem()
     {

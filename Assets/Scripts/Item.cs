@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    ClickAndDrag clickAndDrag;
+    GameObject gameControllerObj;
+    GlobalVariables globalVariables;
+
     GameManager gameManager;
     GameObject gameManagerObj;
+    ClickAndDrag clickAndDrag;
     Camera camera;
+
+    SpriteRenderer spriteRenderer;
+    [SerializeField] Sprite easySprite;
+    [SerializeField] Sprite normalSprite;
 
     [SerializeField] string trashType;
     bool onCorrectBin = false;
@@ -18,8 +25,21 @@ public class Item : MonoBehaviour
         camera = Camera.main;
         clickAndDrag = camera.GetComponent<ClickAndDrag>();
 
+        gameControllerObj = GameObject.FindWithTag("GameController");
+        globalVariables = gameControllerObj.GetComponent<GlobalVariables>();
+
         gameManagerObj = GameObject.FindWithTag("LevelController");
         gameManager = gameManagerObj.GetComponent<GameManager>();
+
+        spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
+        if(globalVariables.difficulty == "easy")
+        {
+            spriteRenderer.sprite = easySprite;
+        }
+        else
+        {
+            spriteRenderer.sprite = normalSprite;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other) 

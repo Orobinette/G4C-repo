@@ -146,4 +146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd9e8067d01bd5348ba5db15224e0469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  easySprite: {fileID: 21300000, guid: 0eb9ea4377728664aafbdf795c3bcc60, type: 3}
+  normalSprite: {fileID: 21300000, guid: 6240e0e17e40ab241bb9b3ba6944df49, type: 3}
   trashType: recycling

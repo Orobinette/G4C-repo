@@ -146,4 +146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd9e8067d01bd5348ba5db15224e0469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  easySprite: {fileID: 21300000, guid: cabd2445c3f4c8c45900fedbeb8f28b5, type: 3}
+  normalSprite: {fileID: 21300000, guid: 1f68a70d33ac3764992dc2e33a15bd07, type: 3}
   trashType: hazard
