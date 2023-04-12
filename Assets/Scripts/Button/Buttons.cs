@@ -49,5 +49,10 @@ public class Buttons : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene(scene);
     }
+
+    public void SetDifficulty(string difficulty) 
+    {   
+        globalVariables.difficulty = difficulty;
+    }
 }
 

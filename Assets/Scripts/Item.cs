@@ -14,7 +14,6 @@ public class Item : MonoBehaviour
 
     SpriteRenderer spriteRenderer;
     [SerializeField] Sprite easySprite;
-    [SerializeField] Sprite normalSprite;
 
     [SerializeField] string trashType;
     bool onCorrectBin = false;
@@ -36,10 +35,9 @@ public class Item : MonoBehaviour
         {
             spriteRenderer.sprite = easySprite;
         }
-        else
-        {
-            spriteRenderer.sprite = normalSprite;
-        }
+        
+
+        Debug.Log(globalVariables.difficulty);
     }
 
     void OnTriggerEnter2D(Collider2D other) 

@@ -64,8 +64,4 @@ public class GlobalVariables : MonoBehaviour
         }
     }
 
-    public void SetDifficulty(string _difficulty) 
-    {   
-        difficulty = _difficulty;
-    }
 }
