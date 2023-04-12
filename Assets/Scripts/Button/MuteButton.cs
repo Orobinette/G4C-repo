@@ -15,11 +15,15 @@ public class MuteButton : MonoBehaviour
     GameObject gameControllerObj;
     GlobalVariables globalVariables;
 
+    [SerializeField] GameObject audioSlider;
+    AudioControls audioControls;
+
     //Sprites
     [SerializeField] Sprite mutedSprite;
     [SerializeField] Sprite mutedHoverSprite;
     [SerializeField] Sprite unmutedSprite;
     [SerializeField] Sprite unmutedHoverSprite;
+
 
 
 /**********
@@ -30,13 +34,18 @@ public class MuteButton : MonoBehaviour
     {
         gameControllerObj = GameObject.FindWithTag("GameController");
         globalVariables = gameControllerObj.GetComponent<GlobalVariables>();
-
-        if(globalVariables.muted)
-        {
-            ChangeSprite();
-        }
+        
 
         button.onClick.AddListener(globalVariables.Mute);
+        button.onClick.AddListener(ChangeSprite);
+
+        if(audioSlider != null) 
+        {
+            audioControls = audioSlider.GetComponent<AudioControls>();
+            button.onClick.AddListener(audioControls.MuteSlider);
+        }
+        
+        ChangeSprite();
     }
 
     public void ChangeSprite() 
@@ -52,6 +61,6 @@ public class MuteButton : MonoBehaviour
             buttons.hoverSprite = unmutedHoverSprite;
         }
 
-        //button.image.sprite = buttons.defaultSprite;
+        button.image.sprite = buttons.defaultSprite;
     }
 }

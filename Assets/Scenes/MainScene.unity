@@ -525,7 +525,6 @@ GameObject:
   - component: {fileID: 693468502}
   - component: {fileID: 693468501}
   - component: {fileID: 693468500}
-  - component: {fileID: 693468503}
   m_Layer: 5
   m_Name: Mute Button
   m_TagString: Mute Button
@@ -576,19 +575,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 693468497}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 693468500}
-        m_TargetAssemblyTypeName: MuteButton, Assembly-CSharp
-        m_MethodName: ChangeSprite
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &693468497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -661,10 +648,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 693468496}
   buttons: {fileID: 693468501}
-  mutedSprite: {fileID: 0}
-  mutedHoverSprite: {fileID: 0}
-  unmutedSprite: {fileID: 0}
-  unmutedHoverSprite: {fileID: 0}
+  audioSlider: {fileID: 0}
+  mutedSprite: {fileID: -1716333475, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
+  mutedHoverSprite: {fileID: -1591012082, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
+  unmutedSprite: {fileID: -320298442, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
+  unmutedHoverSprite: {fileID: -768254602, guid: bc7e65285c4ad5b46acda49e7e6bdbf0, type: 3}
 --- !u!114 &693468501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -725,19 +713,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &693468503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 693468495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a04ab779a7ff11a45b70010b665f2ff6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  effectSlider: {fileID: 0}
 --- !u!1 &704423444
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,7 +1009,7 @@ MonoBehaviour:
       - m_Target: {fileID: 728835775}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Pause
-        m_Mode: 6
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

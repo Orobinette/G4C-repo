@@ -46,6 +46,7 @@ public class GlobalVariables : MonoBehaviour
         muted = false;
 
         audioSource = this.gameObject.GetComponent<AudioSource>();
+        audioSource.volume = 1;
     }
 
     public void Mute() 

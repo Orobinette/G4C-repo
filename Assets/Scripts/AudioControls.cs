@@ -42,6 +42,7 @@ public class AudioControls : MonoBehaviour
         if(globalVariables.muted)
         {
             effectSlider.value = 0;
+
         }
         else  
         {
