@@ -11,16 +11,18 @@ public class LoadingScreen : MonoBehaviour
     void Start() 
     {
         slider.value = 0;
-        Load();
+        StartCoroutine("Load");
     }
 
-    void Load()
+    IEnumerator Load()
     {
         while(slider.value < 1)
         {
+            yield return new WaitForSeconds(0.02f);
+
             slider.value += 0.01f;
         }
 
-        SceneManager.LoadScene("StartScene");
+        SceneManager.LoadScene("MainScene");
     }
 }
