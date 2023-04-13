@@ -35,9 +35,6 @@ public class Item : MonoBehaviour
         {
             spriteRenderer.sprite = easySprite;
         }
-        
-
-        Debug.Log(globalVariables.difficulty);
     }
 
     void OnTriggerEnter2D(Collider2D other) 
