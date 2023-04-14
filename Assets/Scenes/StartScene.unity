@@ -605,7 +605,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 417122457}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 417122455}
+        m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: TrashTutorial
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &417122457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1389,6 +1401,7 @@ MonoBehaviour:
   lastVolume: 0
   difficulty: 
   normalUnlocked: 0
+  nextScene: 
 --- !u!4 &1152697069
 Transform:
   m_ObjectHideFlags: 0
@@ -1828,7 +1841,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1332375275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2012,7 +2025,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonsPanel: {fileID: 1332375274}
   difficultyPanel: {fileID: 1543037172}
-  tutorialPanel: {fileID: 0}
+  tutorialPanel: {fileID: 232713063}
 --- !u!1 &1448291694
 GameObject:
   m_ObjectHideFlags: 0
@@ -2414,31 +2427,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1552482790}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1552482788}
-        m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
-        m_MethodName: SetDifficulty
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: normal
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1552482788}
-        m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
-        m_MethodName: ChangeScene
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: LoadingScene
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1552482790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2492,6 +2481,7 @@ MonoBehaviour:
   buttons: {fileID: 1552482788}
   unlockedSprite: {fileID: -271392291, guid: 768b99845aa153044b8dca7c1350fd33, type: 3}
   unlockedHoverSprite: {fileID: -2066767907, guid: 768b99845aa153044b8dca7c1350fd33, type: 3}
+  button: {fileID: 1552482789}
   thisButton: normal
 --- !u!1 &1581143289
 GameObject:
@@ -2745,7 +2735,7 @@ MonoBehaviour:
         m_MethodName: ChangePanel
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1332375274}
+          m_ObjectArgument: {fileID: 1543037172}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2888,7 +2878,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1790081108}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1790081106}
+        m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: RecyclingTutorial
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1790081108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3169,7 +3171,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2063934034}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2063934032}
+        m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: HazardScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2063934034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3306,7 +3320,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2121744124}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121744122}
+        m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: CompostTutorial
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2121744124
 MonoBehaviour:
   m_ObjectHideFlags: 0
