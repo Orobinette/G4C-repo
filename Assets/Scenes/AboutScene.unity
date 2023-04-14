@@ -1878,7 +1878,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: perfectly recyclable
+  m_text: Glass water bottles can be crushed and turned into tiles, beads, and more!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2677497e6dc20f84098498573d67e8c8, type: 2}
   m_sharedMaterial: {fileID: -5759249467917132027, guid: 2677497e6dc20f84098498573d67e8c8, type: 2}
@@ -4241,7 +4241,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: recycle
+  m_text: Plastic water bottles use T-1 plastic, perfect for recycling
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2677497e6dc20f84098498573d67e8c8, type: 2}
   m_sharedMaterial: {fileID: -5759249467917132027, guid: 2677497e6dc20f84098498573d67e8c8, type: 2}
@@ -4465,7 +4465,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9055efd892feff64e8d0b56bc509530f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aboutPanels: {fileID: 0}
 --- !u!114 &1381167445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5240,7 +5239,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Compost
+  m_text: bread is nitrogen rich, a perfect energy source for microorganisms when
+    composted
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2677497e6dc20f84098498573d67e8c8, type: 2}
   m_sharedMaterial: {fileID: -5759249467917132027, guid: 2677497e6dc20f84098498573d67e8c8, type: 2}
@@ -5645,7 +5645,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Compost
+  m_text: 'The fruit seeds in apples provide nutrients for germinating plants '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2677497e6dc20f84098498573d67e8c8, type: 2}
   m_sharedMaterial: {fileID: -5759249467917132027, guid: 2677497e6dc20f84098498573d67e8c8, type: 2}
