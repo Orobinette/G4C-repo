@@ -95,6 +95,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator Timer() 
     {
+        
         while(time > 0)
         {
             yield return new WaitForSeconds(1f);
@@ -114,6 +115,7 @@ public class GameManager : MonoBehaviour
                 delayMax = 1f;
             }
         }
+    
         if(time == 0) 
         {
             yield return new WaitForSeconds(1f);
@@ -147,6 +149,12 @@ public class GameManager : MonoBehaviour
             globalVariables.highScore = score;
         }
 
+        if(globalVariables.normalUnlocked == false)
+        {
+            globalVariables.normalUnlocked = true;
+        }
+
+        globalVariables.nextScene = "StartScene";
         SceneManager.LoadScene("LoadingScene");
     }
 }

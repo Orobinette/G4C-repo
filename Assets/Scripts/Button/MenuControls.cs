@@ -7,17 +7,24 @@ public class MenuControls : MonoBehaviour
 {
     [SerializeField] GameObject buttonsPanel;
     [SerializeField] GameObject difficultyPanel;
+    [SerializeField] GameObject tutorialPanel;
 
-    public void Back() 
+    List<GameObject> panelList = new List<GameObject>();
+
+    void Start() 
     {
-        buttonsPanel.SetActive(true);
-        difficultyPanel.SetActive(false);
+        panelList.Add(buttonsPanel);
+        panelList.Add(difficultyPanel);
+        panelList.Add(tutorialPanel);
     }
 
-    public void SelectDifficulty()
+    public void ChangePanel(GameObject activePanel)
     {
-        buttonsPanel.SetActive(false);
-        difficultyPanel.SetActive(true);
+        foreach(GameObject obj in panelList)
+        {
+            obj.SetActive(false);
+        }
+
+        activePanel.SetActive(true);
     }
-    
 }

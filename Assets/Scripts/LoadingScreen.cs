@@ -6,10 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class LoadingScreen : MonoBehaviour
 {
+    GameObject gameControllerObj;
+    GlobalVariables globalVariables;
+
     [SerializeField] Slider slider;
 
     void Start() 
     {
+        gameControllerObj = GameObject.FindWithTag("GameController");
+        globalVariables = gameControllerObj.GetComponent<GlobalVariables>();
+
         slider.value = 0;
         StartCoroutine("Load");
     }
@@ -23,6 +29,14 @@ public class LoadingScreen : MonoBehaviour
             slider.value += 0.01f;
         }
 
-        SceneManager.LoadScene("MainScene");
+        if(globalVariables.nextScene == "StartScene")
+        {
+            globalVariables.nextScene = "MainScene";
+            SceneManager.LoadScene("StartScene");
+        }
+        else
+        {
+            SceneManager.LoadScene(globalVariables.nextScene);
+        }
     }
 }

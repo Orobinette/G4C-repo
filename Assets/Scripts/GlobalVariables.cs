@@ -20,6 +20,9 @@ public class GlobalVariables : MonoBehaviour
     public float lastVolume;
 
     public string difficulty;
+    public bool normalUnlocked;
+
+    public string nextScene;
 
 
 /*********
@@ -47,6 +50,8 @@ public class GlobalVariables : MonoBehaviour
 
         audioSource = this.gameObject.GetComponent<AudioSource>();
         audioSource.volume = 1;
+
+        normalUnlocked = false;
     }
 
     public void Mute() 

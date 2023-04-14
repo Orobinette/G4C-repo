@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 768b99845aa153044b8dca7c1350fd33
+guid: ff25da8ff0650844a893cca3e1d8dfae
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,7 +106,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -117,12 +117,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spr_playBtn_0
+      name: spr_tutorialButtons_0
       rect:
         serializedVersion: 2
         x: 0
         y: 36
-        width: 36
+        width: 42
         height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -131,19 +131,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cc2b1cd49121744a989e91e5b6912dc
-      internalID: -542483236
+      spriteID: 499451527e8bb6e4485685d5a7fd2c43
+      internalID: -985948707
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_playBtn_1
+      name: spr_tutorialButtons_1
       rect:
         serializedVersion: 2
-        x: 36
+        x: 42
         y: 36
-        width: 36
+        width: 42
         height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -152,61 +152,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab4827618ed3db141b9bd2b524d9864e
-      internalID: -1504061755
+      spriteID: d720946fa039a4746b65683749587e7f
+      internalID: 290203801
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_playBtn_2
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 36
-        width: 36
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 147e7598846d5fa4a8a689ed4c80decd
-      internalID: -511244533
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spr_playBtn_3
-      rect:
-        serializedVersion: 2
-        x: 108
-        y: 36
-        width: 36
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e343633a637119845b6eee81a749f420
-      internalID: 1623451099
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spr_playBtn_4
+      name: spr_tutorialButtons_2
       rect:
         serializedVersion: 2
         x: 0
         y: 24
-        width: 36
+        width: 42
         height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -215,19 +173,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2e2d81b97b5cf341a08ee0a14c80dd9
-      internalID: -1806433828
+      spriteID: ed018d8baba1bb94e87856635c05d9fa
+      internalID: -1947549281
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_playBtn_5
+      name: spr_tutorialButtons_3
       rect:
         serializedVersion: 2
-        x: 36
+        x: 42
         y: 24
-        width: 36
+        width: 42
         height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -236,61 +194,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b46bedc10ff683b4da6051842c831fb0
-      internalID: 1434978500
+      spriteID: 49a0ddc8b2f0f394fb766ec0f8c3f586
+      internalID: -1744373341
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_playBtn_6
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 24
-        width: 36
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7535d38850956d2498b18d1ae4d17413
-      internalID: -271392291
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spr_playBtn_7
-      rect:
-        serializedVersion: 2
-        x: 108
-        y: 24
-        width: 36
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 59f7803465558ab45855cefdbd69cb6b
-      internalID: -2066767907
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spr_playBtn_8
+      name: spr_tutorialButtons_4
       rect:
         serializedVersion: 2
         x: 0
         y: 12
-        width: 36
+        width: 42
         height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -299,19 +215,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3446a464786e00a4d94204f627726d41
-      internalID: 2023715243
+      spriteID: 5d2a6dec7adf2b843b88f549766c2a9c
+      internalID: 892869006
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_playBtn_9
+      name: spr_tutorialButtons_5
       rect:
         serializedVersion: 2
-        x: 36
+        x: 42
         y: 12
-        width: 36
+        width: 42
         height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -320,61 +236,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4def22c2d8850f5449a4663940b55610
-      internalID: 563413417
+      spriteID: fbcfd54c7d58ae2438b95b0fd07fd3ff
+      internalID: 620696486
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_playBtn_10
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 12
-        width: 36
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e09117317126e0641b56d41466f65001
-      internalID: 1672978442
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spr_playBtn_11
-      rect:
-        serializedVersion: 2
-        x: 108
-        y: 12
-        width: 36
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 25c2a027c72ea464a916c1187540c7d3
-      internalID: -1750885725
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spr_playBtn_12
+      name: spr_tutorialButtons_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 36
+        width: 42
         height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -383,19 +257,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35a536e064d0d7d44aa0e050f6455a5f
-      internalID: 1406899370
+      spriteID: 9318cd286a1696241a30fc0ebb03f5ba
+      internalID: 205885621
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_playBtn_13
+      name: spr_tutorialButtons_7
       rect:
         serializedVersion: 2
-        x: 36
+        x: 42
         y: 0
-        width: 36
+        width: 42
         height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -404,50 +278,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9cbcd21106837a84da6d2bdebdc6f477
-      internalID: -438790121
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spr_playBtn_14
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 0
-        width: 36
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4aabc2045b4703645ad06d991556dc2c
-      internalID: 1808567801
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spr_playBtn_15
-      rect:
-        serializedVersion: 2
-        x: 108
-        y: 0
-        width: 36
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eb7e7800813bcfb4ab2918b7004f2ef9
-      internalID: -1223855764
+      spriteID: 508d0f193a8a2654fa43979ceaaff305
+      internalID: -1172096129
       vertices: []
       indices: 
       edges: []
@@ -463,22 +295,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      spr_playBtn_0: -542483236
-      spr_playBtn_11: -1750885725
-      spr_playBtn_14: 1808567801
-      spr_playBtn_13: -438790121
-      spr_playBtn_1: -1504061755
-      spr_playBtn_4: -1806433828
-      spr_playBtn_6: -271392291
-      spr_playBtn_5: 1434978500
-      spr_playBtn_8: 2023715243
-      spr_playBtn_15: -1223855764
-      spr_playBtn_10: 1672978442
-      spr_playBtn_2: -511244533
-      spr_playBtn_3: 1623451099
-      spr_playBtn_7: -2066767907
-      spr_playBtn_9: 563413417
-      spr_playBtn_12: 1406899370
+      spr_tutorialButtons_3: -1744373341
+      spr_tutorialButtons_1: 290203801
+      spr_tutorialButtons_6: 205885621
+      spr_tutorialButtons_2: -1947549281
+      spr_tutorialButtons_0: -985948707
+      spr_tutorialButtons_7: -1172096129
+      spr_tutorialButtons_4: 892869006
+      spr_tutorialButtons_5: 620696486
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
