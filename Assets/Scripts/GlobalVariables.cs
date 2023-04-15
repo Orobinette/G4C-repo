@@ -19,6 +19,7 @@ public class GlobalVariables : MonoBehaviour
     public bool muted;
     public float lastVolume;
 
+    public string tutorialType;
     public string difficulty;
     public bool normalUnlocked;
 

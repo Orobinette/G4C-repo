@@ -34,9 +34,13 @@ public class LoadingScreen : MonoBehaviour
             globalVariables.nextScene = "MainScene";
             SceneManager.LoadScene("StartScene");
         }
-        else
+        else if(globalVariables.nextScene == "MainScene")
         {
-            SceneManager.LoadScene(globalVariables.nextScene);
+            SceneManager.LoadScene("MainScene");
+        }
+        else 
+        {
+            SceneManager.LoadScene("MainScene");
         }
     }
 }

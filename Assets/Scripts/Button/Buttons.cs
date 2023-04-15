@@ -54,5 +54,10 @@ public class Buttons : MonoBehaviour
     {   
         globalVariables.difficulty = difficulty;
     }
+
+    public void SelectTutorial(string tutorial)
+    {
+        globalVariables.tutorialType = tutorial;
+    }
 }
 

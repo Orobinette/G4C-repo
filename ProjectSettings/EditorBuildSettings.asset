@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Tutorials/HazardTutorial.unity
     guid: 1d7ed8274d2c3fd4f9321cc7a036b2b1
   - enabled: 1
-    path: Assets/Scenes/Tutorials/RecyclingTutorial.unity
+    path: Assets/Scenes/RecyclingTutorial.unity
     guid: b0c43f44aa276ab46865da2496fb8bed
   - enabled: 1
     path: Assets/Scenes/Tutorials/TrashTutorial.unity

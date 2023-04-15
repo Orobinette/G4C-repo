@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class ClickAndDrag : MonoBehaviour
 {
@@ -11,7 +13,26 @@ public class ClickAndDrag : MonoBehaviour
 
     SpriteRenderer spriteRenderer;
 
-    void Update()
+    GameObject bin;
+
+    GameObject gameControllerObj;
+    GlobalVariables globalVariables;
+
+    GameObject levelManagerObj;
+    Tutorials tutorials;
+
+    void Start() 
+    {
+        gameControllerObj = GameObject.FindWithTag("GameController");
+        globalVariables = gameControllerObj.GetComponent<GlobalVariables>();
+
+        levelManagerObj = GameObject.FindWithTag("LevelController");
+        tutorials = levelManagerObj.GetComponent<Tutorials>();
+
+    }
+
+
+    void Update() 
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         if (Input.GetMouseButtonDown(0))
@@ -26,6 +47,7 @@ public class ClickAndDrag : MonoBehaviour
                 offset = selectedObject.transform.position - mousePosition;
 
                 item = selectedObject.GetComponent<Item>();
+                
             }
         }
         if (selectedObject)

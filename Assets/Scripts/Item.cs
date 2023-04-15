@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Item : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Item : MonoBehaviour
     GameManager gameManager;
     GameObject gameManagerObj;
     ClickAndDrag clickAndDrag;
+    Tutorials tutorials;
     Camera camera;
 
     SpriteRenderer spriteRenderer;
@@ -34,6 +36,11 @@ public class Item : MonoBehaviour
         if(globalVariables.difficulty == "easy")
         {
             spriteRenderer.sprite = easySprite;
+        }
+
+        if(SceneManager.GetActiveScene().name == "RecyclingTutorial") 
+        {
+            tutorials = gameManagerObj.GetComponent<Tutorials>();
         }
     }
 
@@ -65,14 +72,23 @@ public class Item : MonoBehaviour
     {
         if(onBin == true)
         {
-            if(onCorrectBin == true)
+            if(SceneManager.GetActiveScene().name == "RecyclingTutorial") 
             {
-                gameManager.ChangeScore(1);
+                tutorials.index++;
+                tutorials.SpawnItem();
             }
             else 
             {
-                gameManager.ChangeScore(-1);
+                if(onCorrectBin == true)
+                {
+                    gameManager.ChangeScore(1);
+                }
+                else 
+                {
+                    gameManager.ChangeScore(-1);
+                }
             }
+            
             Destroy(this.gameObject);
         }
     }

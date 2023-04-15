@@ -93,7 +93,7 @@ public class GameManager : MonoBehaviour
         
     }
 
-    IEnumerator Timer() 
+    IEnumerator Timer()  
     {
         
         while(time > 0)
