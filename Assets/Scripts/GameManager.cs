@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
     //Class References
     GlobalVariables globalVariables;
     GameObject gameControllerObj;
-
     Audio audio;
 
     //Script References
@@ -84,12 +83,12 @@ public class GameManager : MonoBehaviour
 
         if(scoreModifier > 0)
         {
-            audio.PlayPointSound("positive");
+            audio.PlaySound("positive");
             globalVariables.totalCorrectScore++;
         }
         else
         {
-            audio.PlayPointSound("negative");
+            audio.PlaySound("negative");
             globalVariables.totalIncorrectScore--;
         }
     }
@@ -131,6 +130,8 @@ public class GameManager : MonoBehaviour
         {
             pauseMenu.SetActive(true);
             Time.timeScale = 0;
+            
+            audio.PlaySound("pause");
 
             paused = true;
         }

@@ -19,6 +19,7 @@ public class Tutorials : MonoBehaviour
 
     List<List<GameObject>> popupTypes = new List<List<GameObject>>();
     List<GameObject> popupList = new List<GameObject>();
+    [SerializeField] GameObject htpPanel;
     [SerializeField] List<GameObject> recyclingPopups = new List<GameObject>();
     [SerializeField] List<GameObject> compostPopups = new List<GameObject>();
     [SerializeField] List<GameObject> hazardPopups = new List<GameObject>();
@@ -42,8 +43,10 @@ public class Tutorials : MonoBehaviour
     Rigidbody2D truckRB;
     GameObject itemObj; 
 
+    [SerializeField] GameObject exitButton;
+
     //Classes
-    [SerializeField] Item item;
+    public Item item;
 
     GameObject gameControllerObj;
     GlobalVariables globalVariables;
@@ -51,7 +54,7 @@ public class Tutorials : MonoBehaviour
 
     public int index;
 
-    void Start() 
+    IEnumerator Start() 
     {
         index = 0;
 
@@ -86,14 +89,17 @@ public class Tutorials : MonoBehaviour
         itemSpawnPoint = new Vector3(0f, 0f, 0f);
         truckSpawnPoint = new Vector3(8f, -6f, 0f);
 
-        SpawnItem();
-        EnableCursor();
+        yield return new WaitForSeconds(1.5f);
+        HowToPlay();
+        DisableCursor();
     }
 
-    public void SpawnItem() 
+    public IEnumerator SpawnItem() 
     {
         if(index < itemList.Count) 
         {
+            DisableCursor();
+
             if(item != null) 
             {
                 Destroy(itemObj);
@@ -105,8 +111,8 @@ public class Tutorials : MonoBehaviour
             
             itemObj = Instantiate(itemList[index], itemSpawnPoint, Quaternion.identity);
             
-
-            StartCoroutine("PopUp");
+            yield return new WaitForSeconds(2.5f);
+            PopUp();
             //index++;
         }
         else 
@@ -115,15 +121,37 @@ public class Tutorials : MonoBehaviour
         }
     }
 
-    public IEnumerator PopUp() 
+    public void HowToPlay() 
     {
-        yield return new WaitForSeconds(2.5f);
+        if(htpPanel.activeInHierarchy == false) 
+        {
+            htpPanel.SetActive(true);
+            panelBackground.SetActive(true);
+        }
+        else 
+        {
+            htpPanel.SetActive(false);
+            exitButton.SetActive(true);
+            panelBackground.SetActive(false);
+            StartCoroutine("SpawnItem");
+        }
+    }
 
-        DisableCursor();
+    public void PopUp() 
+    {
         popupList[index].SetActive(true);
         panelBackground.SetActive(true);
 
+        /*
         yield return new WaitForSeconds(5f);
+        popupList[index].SetActive(false);
+        panelBackground.SetActive(false);
+
+        EnableCursor();
+        */
+    }
+    public void ClosePopUp() 
+    {
         popupList[index].SetActive(false);
         panelBackground.SetActive(false);
 

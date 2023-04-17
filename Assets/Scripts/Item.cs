@@ -74,8 +74,17 @@ public class Item : MonoBehaviour
         {
             if(SceneManager.GetActiveScene().name == "RecyclingTutorial") 
             {
-                tutorials.index++;
-                tutorials.SpawnItem();
+                if(onCorrectBin == true)
+                {
+                    tutorials.index++;
+                    StartCoroutine(tutorials.SpawnItem());
+                }
+                else
+                {
+                    this.gameObject.transform.position = Vector3.zero;
+                    tutorials.PopUp();
+                    return;
+                }
             }
             else 
             {

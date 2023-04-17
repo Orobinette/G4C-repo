@@ -410,6 +410,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: spr_pauseButtons_14
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7910a377176f2a49aa69c6e0afde407
+      internalID: -2106629596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_pauseButtons_15
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ab6c4916df0dff4e817255aafb012fc
+      internalID: -1681704953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -427,6 +469,7 @@ TextureImporter:
       spr_pauseButtons_4: 1861570320
       spr_pauseButtons_10: -1716333475
       spr_pauseButtons_11: -1591012082
+      spr_pauseButtons_15: -1681704953
       spr_pauseButtons_7: -263351307
       spr_pauseButtons_5: 801987623
       spr_pauseButtons_6: 89575311
@@ -435,6 +478,7 @@ TextureImporter:
       spr_pauseButtons_3: -674918462
       spr_pauseButtons_12: -299046135
       spr_pauseButtons_13: 114852162
+      spr_pauseButtons_14: -2106629596
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
