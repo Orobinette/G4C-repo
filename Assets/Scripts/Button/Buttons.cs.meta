@@ -3,7 +3,11 @@ guid: 9b1c139db9ead0f438a11c89cc4069bf
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - button: {instanceID: 0}
+  - defaultSprite: {instanceID: 0}
+  - hoverSprite: {instanceID: 0}
+  - clickSound: {fileID: 8300000, guid: 3c08c0ccc890cb048be25839fb33b8cf, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

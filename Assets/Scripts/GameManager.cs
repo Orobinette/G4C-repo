@@ -85,12 +85,13 @@ public class GameManager : MonoBehaviour
         if(scoreModifier > 0)
         {
             audio.PlayPointSound("positive");
+            globalVariables.totalCorrectScore++;
         }
         else
         {
             audio.PlayPointSound("negative");
+            globalVariables.totalIncorrectScore--;
         }
-        
     }
 
     IEnumerator Timer()  

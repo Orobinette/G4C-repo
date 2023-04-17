@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class Buttons : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class Buttons : MonoBehaviour
     GameObject gameControllerObj;
     GlobalVariables globalVariables;
     AudioControls audioControls;
+
 
     public Sprite defaultSprite;
     public Sprite hoverSprite;
@@ -59,5 +61,12 @@ public class Buttons : MonoBehaviour
     {
         globalVariables.tutorialType = tutorial;
     }
+
+    void OnEnable() 
+    {
+        button.image.sprite = defaultSprite;
+    }
+
+
 }
 

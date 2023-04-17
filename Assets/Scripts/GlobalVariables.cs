@@ -13,6 +13,8 @@ public class GlobalVariables : MonoBehaviour
     public static GlobalVariables instance;
     AudioSource audioSource;
 
+    public int totalCorrectScore;
+    public int totalIncorrectScore;
     public int highScore;
     [SerializeField] TextMeshProUGUI highScoreText;
 

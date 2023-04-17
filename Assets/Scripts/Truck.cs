@@ -45,15 +45,15 @@ public class Truck : MonoBehaviour
         directionList.Add(new Vector3(-1f, 0f, 0f));
         directionList.Add(new Vector3(1f, 0f, 0f));
 
-        spawnPointList.Add(new Vector3(7f, -6f, 0f));
-        spawnPointList.Add(new Vector3(-7f, 6f, 0f));
+        spawnPointList.Add(new Vector3(8f, -6f, 0f));
+        spawnPointList.Add(new Vector3(-8f, 6f, 0f));
         spawnPointList.Add(new Vector3(10f, 4f, 0f));
         spawnPointList.Add(new Vector3(-10f, -4f, 0f));
 
-        itemSpawnPoints.Add(new Vector3(4f, 0f, 0f));
-        itemSpawnPoints.Add(new Vector3(-4f, 0f, 0f));
-        itemSpawnPoints.Add(new Vector3(0f, 2f, 0f));
-        itemSpawnPoints.Add(new Vector3(0f, -2f, 0f));
+        itemSpawnPoints.Add(new Vector3(5f, 0f, 0f));
+        itemSpawnPoints.Add(new Vector3(-5f, 0f, 0f));
+        itemSpawnPoints.Add(new Vector3(0f, 2.5f, 0f));
+        itemSpawnPoints.Add(new Vector3(0f, -2.5f, 0f));
 
 
         spriteRenderer.sprite = spriteList[orientation];
@@ -85,7 +85,7 @@ public class Truck : MonoBehaviour
     
     Vector3 GenerateSpawn ()
     {
-        Vector3 offset = new Vector3(Random.Range(-1, 1), Random.Range(-1, 1), 0);
+        Vector3 offset = new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0);
         Vector3 itemSpawn = itemSpawnPoints[orientation] + offset;
 
         return itemSpawn;

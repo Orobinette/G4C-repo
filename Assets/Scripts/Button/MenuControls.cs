@@ -5,18 +5,9 @@ using TMPro;
 
 public class MenuControls : MonoBehaviour
 {
-    [SerializeField] GameObject buttonsPanel;
-    [SerializeField] GameObject difficultyPanel;
-    [SerializeField] GameObject tutorialPanel;
+    [SerializeField] Buttons buttons;
 
-    List<GameObject> panelList = new List<GameObject>();
-
-    void Start() 
-    {
-        panelList.Add(buttonsPanel);
-        panelList.Add(difficultyPanel);
-        panelList.Add(tutorialPanel);
-    }
+    [SerializeField] List<GameObject> panelList = new List<GameObject>();
 
     public void ChangePanel(GameObject activePanel)
     {
