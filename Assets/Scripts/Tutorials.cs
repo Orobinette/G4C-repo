@@ -94,7 +94,7 @@ public class Tutorials : MonoBehaviour
         DisableCursor();
     }
 
-    public IEnumerator SpawnItem() 
+    public void SpawnItem() 
     {
         if(index < itemList.Count) 
         {
@@ -110,10 +110,8 @@ public class Tutorials : MonoBehaviour
             truckRenderer.sprite = truckSprites[tutorialType];
             
             itemObj = Instantiate(itemList[index], itemSpawnPoint, Quaternion.identity);
-            
-            yield return new WaitForSeconds(2.5f);
-            PopUp();
-            //index++;
+
+            StartCoroutine("PopUpDelay");
         }
         else 
         {
@@ -133,22 +131,17 @@ public class Tutorials : MonoBehaviour
             htpPanel.SetActive(false);
             exitButton.SetActive(true);
             panelBackground.SetActive(false);
-            StartCoroutine("SpawnItem");
+            SpawnItem();
         }
     }
 
     public void PopUp() 
     {
-        popupList[index].SetActive(true);
-        panelBackground.SetActive(true);
-
-        /*
-        yield return new WaitForSeconds(5f);
-        popupList[index].SetActive(false);
-        panelBackground.SetActive(false);
-
-        EnableCursor();
-        */
+        if(panelBackground.activeInHierarchy == false) 
+        {
+            popupList[index].SetActive(true);
+            panelBackground.SetActive(true);
+        }
     }
     public void ClosePopUp() 
     {
@@ -156,6 +149,11 @@ public class Tutorials : MonoBehaviour
         panelBackground.SetActive(false);
 
         EnableCursor();
+    }
+    IEnumerator PopUpDelay() 
+    {
+        yield return new WaitForSeconds(2.5f);
+        PopUp();
     }
 
     public void EnableCursor() 

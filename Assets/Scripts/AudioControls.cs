@@ -11,8 +11,10 @@ public class AudioControls : MonoBehaviour
 
     //Class References
     GameObject gameControllerObj;
+    GameObject musicPlayer;
     GlobalVariables globalVariables;
     AudioSource audioSource;
+    AudioSource musicSource;
 
     //Other
     [SerializeField] Slider effectSlider;
@@ -25,8 +27,11 @@ public class AudioControls : MonoBehaviour
     void Start() 
     {
         gameControllerObj = GameObject.FindWithTag("GameController");
+        musicPlayer = gameControllerObj.transform.GetChild(0).gameObject;
+
         globalVariables = gameControllerObj.GetComponent<GlobalVariables>();
         audioSource = gameControllerObj.GetComponent<AudioSource>();
+        musicSource = musicPlayer.GetComponent<AudioSource>();
 
         
         MuteSlider();
@@ -35,6 +40,7 @@ public class AudioControls : MonoBehaviour
     public void UpdateSlider() 
     {
         audioSource.volume = effectSlider.value;
+        musicSource.volume = effectSlider.value;
     }
 
     public void MuteSlider() 
@@ -42,9 +48,8 @@ public class AudioControls : MonoBehaviour
         if(globalVariables.muted)
         {
             effectSlider.value = 0;
-
         }
-        else  
+        else if(!globalVariables.muted)
         {
             effectSlider.value = globalVariables.lastVolume; 
         }

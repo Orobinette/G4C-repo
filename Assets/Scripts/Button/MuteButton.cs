@@ -9,6 +9,8 @@ public class MuteButton : MonoBehaviour
 *VARIABLES
 **********/
 
+    [SerializeField] string audioType;
+
     [SerializeField] Button button;
     [SerializeField] Buttons buttons;
 

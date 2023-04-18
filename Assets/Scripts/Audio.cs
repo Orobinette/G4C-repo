@@ -5,37 +5,17 @@ using UnityEngine.Audio;
 
 public class Audio : MonoBehaviour
 {
-    /*TODO
-
-    -make if/else statement a list or something for performance reasons
-    */
-
     [SerializeField] AudioSource audioSource;
 
     public AudioClip positiveSound;
     public AudioClip negativeSound;
     public AudioClip pauseSound;
     public AudioClip clickSound;
+    public AudioClip countdownSound;
 
-    public void PlaySound(string type) 
+    public void PlaySound(AudioClip soundEffect) 
     {
-        if(type == "positive")
-        {
-            audioSource.clip = positiveSound;
-        }
-        else if(type == "negative")
-        {
-            audioSource.clip = negativeSound;
-        }
-        else if(type == "pause") 
-        {
-            audioSource.clip = pauseSound;
-        }
-        else if (type == "click") 
-        {
-            audioSource.clip = clickSound;
-        }
-        
+        audioSource.clip = soundEffect;
         audioSource.Play(); 
     }
 }

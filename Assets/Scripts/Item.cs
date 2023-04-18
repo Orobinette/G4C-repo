@@ -24,13 +24,13 @@ public class Item : MonoBehaviour
     void Start() 
     {
         camera = Camera.main;
-        clickAndDrag = camera.GetComponent<ClickAndDrag>();
 
         gameControllerObj = GameObject.FindWithTag("GameController");
         globalVariables = gameControllerObj.GetComponent<GlobalVariables>();
 
         gameManagerObj = GameObject.FindWithTag("LevelController");
         gameManager = gameManagerObj.GetComponent<GameManager>();
+        clickAndDrag = gameManagerObj.GetComponent<ClickAndDrag>();
 
         spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
         if(globalVariables.difficulty == "easy")
@@ -42,6 +42,8 @@ public class Item : MonoBehaviour
         {
             tutorials = gameManagerObj.GetComponent<Tutorials>();
         }
+
+        clickAndDrag.UpdateItems("add", this.gameObject);
     }
 
     void OnTriggerEnter2D(Collider2D other) 
@@ -77,7 +79,7 @@ public class Item : MonoBehaviour
                 if(onCorrectBin == true)
                 {
                     tutorials.index++;
-                    StartCoroutine(tutorials.SpawnItem());
+                    tutorials.SpawnItem();
                 }
                 else
                 {
@@ -97,8 +99,13 @@ public class Item : MonoBehaviour
                     gameManager.ChangeScore(-1);
                 }
             }
-            
-            Destroy(this.gameObject);
+            Despawn();
         }
+    }
+
+    void Despawn() 
+    {
+        clickAndDrag.UpdateItems("remove", this.gameObject);
+        Destroy(this.gameObject);
     }
 }

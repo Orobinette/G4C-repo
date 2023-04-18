@@ -10,6 +10,7 @@ public class LoadingScreen : MonoBehaviour
     GameObject gameControllerObj;
     GlobalVariables globalVariables;
     LoadingTips loadingTips;
+    ClickAndDrag clickAndDrag;
 
     [SerializeField] Slider slider;
     [SerializeField] TMP_Text tipText;
@@ -20,6 +21,7 @@ public class LoadingScreen : MonoBehaviour
         gameControllerObj = GameObject.FindWithTag("GameController");
         globalVariables = gameControllerObj.GetComponent<GlobalVariables>();
         loadingTips = gameControllerObj.GetComponent<LoadingTips>();
+        clickAndDrag = gameControllerObj.GetComponent<ClickAndDrag>();
 
         slider.value = 0;
 
@@ -46,13 +48,16 @@ public class LoadingScreen : MonoBehaviour
             globalVariables.nextScene = "MainScene";
             SceneManager.LoadScene("StartScene");
         }
+        /*
         else if(globalVariables.nextScene == "MainScene")
         {
             SceneManager.LoadScene("MainScene");
         }
+        */
         else 
         {
             SceneManager.LoadScene("MainScene");
+            clickAndDrag.UpdateItems("reset", null);
         }
     }
 }

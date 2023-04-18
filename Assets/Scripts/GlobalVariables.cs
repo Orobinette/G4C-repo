@@ -12,6 +12,7 @@ public class GlobalVariables : MonoBehaviour
 
     public static GlobalVariables instance;
     AudioSource audioSource;
+    AudioSource musicSource;
 
     public int totalCorrectScore;
     public int totalIncorrectScore;
@@ -19,6 +20,7 @@ public class GlobalVariables : MonoBehaviour
     [SerializeField] TextMeshProUGUI highScoreText;
 
     public bool muted;
+    public bool musicIsMuted;
     public float lastVolume;
 
     public string tutorialType;
@@ -54,20 +56,24 @@ public class GlobalVariables : MonoBehaviour
         audioSource = this.gameObject.GetComponent<AudioSource>();
         audioSource.volume = 1;
 
+        musicSource = this.gameObject.transform.GetChild(0).GetComponent<AudioSource>();
+
         normalUnlocked = false;
     }
 
     public void Mute() 
-    {
+    {  
         if(!muted) 
         {
             lastVolume = audioSource.volume;
             audioSource.volume = 0;
+            musicSource.volume = 0;
             muted = true;
         }
         else 
         {
             audioSource.volume = lastVolume;
+            musicSource.volume = lastVolume;
             muted = false;
         }
     }

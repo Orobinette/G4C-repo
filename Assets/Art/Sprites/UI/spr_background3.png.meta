@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c0ec26e31788ab246a1518ce2146e4b4
+guid: 8fb4b8edceb9c384382fc01c99f4ce1c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -115,91 +115,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: spr_background(2)_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 105
-        width: 176
-        height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ca9bf45051b4b0d4fb850b1aa2512dfb
-      internalID: -1601555320
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spr_background(2)_1
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 105
-        width: 176
-        height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2a3bf68b216e6654e812dcdaa1adbe33
-      internalID: -307450668
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spr_background(2)_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 176
-        height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d9a8693672e662d488a5383d076e874c
-      internalID: -197788538
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spr_background(2)_3
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 0
-        width: 176
-        height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 18ef86cf08c933040acba49f304c9370
-      internalID: 1974845942
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -210,11 +126,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      spr_background(2)_1: -307450668
-      spr_background(2)_3: 1974845942
-      spr_background(2)_0: -1601555320
-      spr_background(2)_2: -197788538
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

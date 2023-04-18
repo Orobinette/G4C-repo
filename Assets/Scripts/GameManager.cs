@@ -83,12 +83,12 @@ public class GameManager : MonoBehaviour
 
         if(scoreModifier > 0)
         {
-            audio.PlaySound("positive");
+            audio.PlaySound(audio.positiveSound);
             globalVariables.totalCorrectScore++;
         }
         else
         {
-            audio.PlaySound("negative");
+            audio.PlaySound(audio.negativeSound);
             globalVariables.totalIncorrectScore--;
         }
     }
@@ -114,13 +114,28 @@ public class GameManager : MonoBehaviour
                 delayMin = 0.5f;
                 delayMax = 1f;
             }
+            /*
+            if(time == 5)
+            {
+                StartCoroutine("Countdown");
+            }
+            */
         }
     
         if(time == 0) 
         {
             yield return new WaitForSeconds(1f);
 
-            EndGame();
+            StartCoroutine("EndGame");
+        }
+    }
+
+    IEnumerator Countdown() 
+    {
+        for(int i = 5; i > 0; i--) 
+        {
+            audio.PlaySound(audio.countdownSound);
+            yield return new WaitForSeconds(1f);
         }
     }
 
@@ -131,7 +146,7 @@ public class GameManager : MonoBehaviour
             pauseMenu.SetActive(true);
             Time.timeScale = 0;
             
-            audio.PlaySound("pause");
+            audio.PlaySound(audio.pauseSound);
 
             paused = true;
         }
@@ -144,8 +159,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void EndGame() 
+    IEnumerator EndGame() 
     {
+        Time.timeScale = 0;
+        yield return new WaitForSeconds(2f);
+
         if(score > globalVariables.highScore)
         {
             globalVariables.highScore = score;

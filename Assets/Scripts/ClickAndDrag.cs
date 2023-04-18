@@ -21,6 +21,8 @@ public class ClickAndDrag : MonoBehaviour
     GameObject levelManagerObj;
     Tutorials tutorials;
 
+    static List<GameObject> activeItems = new List<GameObject>();
+
     void Start() 
     {
         gameControllerObj = GameObject.FindWithTag("GameController");
@@ -28,7 +30,6 @@ public class ClickAndDrag : MonoBehaviour
 
         levelManagerObj = GameObject.FindWithTag("LevelController");
         tutorials = levelManagerObj.GetComponent<Tutorials>();
-
     }
 
 
@@ -62,4 +63,25 @@ public class ClickAndDrag : MonoBehaviour
             item.CheckForBin();
         }
     }
+
+    public void UpdateItems(string action, GameObject obj) 
+    {
+        if(action == "add")
+        {
+            activeItems.Add(obj);
+            obj.transform.position = new Vector3(obj.transform.position.x, obj.transform.position.y, activeItems.Count);
+        }
+        else if (action == "remove")
+        {
+            activeItems.Remove(obj);
+            foreach(GameObject item in activeItems) 
+            {
+                item.transform.position = new Vector3(item.transform.position.x, item.transform.position.y, activeItems.Count);
+            }
+        }
+        else
+        {
+            activeItems = new List<GameObject>();
+        }
+    }   
 }
