@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
 
     //Script References
     [SerializeField] List<GameObject> truckList = new List<GameObject>();
+    [SerializeField] GameObject itemPref;
 
     //UI
     public int score = 0;
@@ -42,7 +43,7 @@ public class GameManager : MonoBehaviour
     void Start() 
     {
         StartCoroutine("Timer");
-        StartCoroutine("SpawnTruck");
+        StartCoroutine("SpawnItem");
 
         scoreText.text = "Score: 0";
         timerText.text = "Timer: 60";
@@ -69,6 +70,15 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(Random.Range(delayMin, delayMax));
 
             Instantiate(truckList[Random.Range(0, truckList.Count)]);
+        }
+    }
+
+    IEnumerator SpawnItem() 
+    {
+        while(time > 0)
+        {
+            yield return new WaitForSeconds(Random.Range(delayMin, delayMax));
+            Instantiate(itemPref);
         }
     }
 

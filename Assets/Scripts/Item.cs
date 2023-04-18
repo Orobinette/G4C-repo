@@ -17,7 +17,7 @@ public class Item : MonoBehaviour
     SpriteRenderer spriteRenderer;
     [SerializeField] Sprite easySprite;
 
-    [SerializeField] string trashType;
+    public string trashType;
     bool onCorrectBin = false;
     bool onBin = false;
 
@@ -33,10 +33,12 @@ public class Item : MonoBehaviour
         clickAndDrag = gameManagerObj.GetComponent<ClickAndDrag>();
 
         spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
+        /*
         if(globalVariables.difficulty == "easy")
         {
             spriteRenderer.sprite = easySprite;
         }
+        */
 
         if(SceneManager.GetActiveScene().name == "RecyclingTutorial") 
         {
