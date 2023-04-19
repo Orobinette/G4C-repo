@@ -62,11 +62,14 @@ public class Buttons : MonoBehaviour
         globalVariables.tutorialType = tutorial;
     }
 
+    public void QuitGame() 
+    {
+        Application.Quit();
+    }
+
     void OnEnable() 
     {
         button.image.sprite = defaultSprite;
     }
-
-
 }
 

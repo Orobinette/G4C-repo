@@ -8,18 +8,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StartScene.unity
     guid: b06c5a0b84cad354a84aee4d75941ea5
-  - enabled: 1
-    path: Assets/Scenes/Tutorials/CompostTutorial.unity
-    guid: d958a3a916e96294ca452f07b373af11
-  - enabled: 1
-    path: Assets/Scenes/Tutorials/HazardTutorial.unity
-    guid: 1d7ed8274d2c3fd4f9321cc7a036b2b1
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/RecyclingTutorial.unity
     guid: b0c43f44aa276ab46865da2496fb8bed
-  - enabled: 1
-    path: Assets/Scenes/Tutorials/TrashTutorial.unity
-    guid: d8d23cf099302404095790deb89aa37e
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 4284fc4e2b3d0334da25bc9dc39df2e8
