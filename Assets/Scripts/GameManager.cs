@@ -136,7 +136,7 @@ public class GameManager : MonoBehaviour
         {
             yield return new WaitForSeconds(1f);
 
-            StartCoroutine("EndGame");
+            EndGame();
         }
     }
 
@@ -169,11 +169,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    IEnumerator EndGame() 
+    void EndGame() 
     {
-        Time.timeScale = 0;
-        yield return new WaitForSeconds(2f);
-
         if(score > globalVariables.highScore)
         {
             globalVariables.highScore = score;

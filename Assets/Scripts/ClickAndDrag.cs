@@ -54,11 +54,13 @@ public class ClickAndDrag : MonoBehaviour
         if (selectedObject)
         {
             selectedObject.transform.position = mousePosition + offset;
+            spriteRenderer.sortingLayerName = "topItem";
         }
+        
         if (Input.GetMouseButtonUp(0) && selectedObject)
         {
+            selectedObject.GetComponent<SpriteRenderer>().sortingLayerName = "item";
             selectedObject = null;
-            spriteRenderer.sortingOrder = 2;
 
             item.CheckForBin();
         }
@@ -70,14 +72,22 @@ public class ClickAndDrag : MonoBehaviour
         {
             activeItems.Add(obj);
             obj.transform.position = new Vector3(obj.transform.position.x, obj.transform.position.y, activeItems.Count);
+            obj.GetComponent<SpriteRenderer>().sortingOrder = activeItems.Count;
         }
         else if (action == "remove")
         {
             activeItems.Remove(obj);
-            foreach(GameObject item in activeItems) 
+
+            if(activeItems.Count != 0) 
             {
-                item.transform.position = new Vector3(item.transform.position.x, item.transform.position.y, activeItems.Count);
+                for(int _i = 0; _i < activeItems.Count; _i++) 
+                {
+                    activeItems[_i].transform.position = new Vector3(activeItems[_i].transform.position.x, activeItems[_i].transform.position.y, activeItems.Count);
+                    activeItems[_i].GetComponent<SpriteRenderer>().sortingOrder = _i;
+                }
             }
+
+            Destroy(obj);
         }
         else
         {

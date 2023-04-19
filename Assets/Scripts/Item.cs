@@ -108,6 +108,5 @@ public class Item : MonoBehaviour
     void Despawn() 
     {
         clickAndDrag.UpdateItems("remove", this.gameObject);
-        Destroy(this.gameObject);
     }
 }

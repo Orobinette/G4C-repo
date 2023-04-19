@@ -2,17 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemSpawn : MonoBehaviour
+public class ItemConstructor : MonoBehaviour
 {
+/********
+*Variables
+*********/
+
+    //Object References
     GameObject gameControllerObj;
     GlobalVariables globalVariables;
 
     [SerializeField] GameObject itemPref;
     SpriteRenderer spriteRenderer;
 
-    List<Vector3> spawnPoints = new List<Vector3>();
-    int index;
-    List<string> trashTypes = new List<string>();
+    //Scripting Variables
+    List<Vector3> spawnPoints = new List<Vector3>() {new Vector3(6f, 0f, 0f), new Vector3(-6f, 0f, 0f), new Vector3(0f, 2.5f, 0f), new Vector3(0f, -2.5f, 0f)};
+    private Vector3 offset = new Vector3();
+    int index; //index of trash types in lists [recycling, hazard, trash, compost]
+    List<string> trashTypes = new List<string>() {"recycling", "hazard", "trash", "compost"}; 
 
     List<List<Sprite>> itemList = new List<List<Sprite>>();
     List<Sprite> spriteList = new List<Sprite>();
@@ -29,24 +36,33 @@ public class ItemSpawn : MonoBehaviour
 
     Item item;
 
+
+/*********
+*FUNCTIONS
+*********/
+
     void Start() 
     {
         gameControllerObj = GameObject.FindWithTag("GameController");
         globalVariables = gameControllerObj.GetComponent<GlobalVariables>();
 
+        /*
         trashTypes.Add("recycling");
         trashTypes.Add("hazard");
         trashTypes.Add("trash");
         trashTypes.Add("compost");
+        */
 
         index = Random.Range(0, 4);
         item = this.gameObject.GetComponent<Item>();
         item.trashType = trashTypes[index];
 
+        /*
         spawnPoints.Add(new Vector3(5f, 0f, 0f));
         spawnPoints.Add(new Vector3(-5f, 0f, 0f));
         spawnPoints.Add(new Vector3(0f, 2.5f, 0f));
         spawnPoints.Add(new Vector3(0f, -2.5f, 0f));
+        */
 
         if(globalVariables.difficulty == "easy")
         {
@@ -68,6 +84,7 @@ public class ItemSpawn : MonoBehaviour
         spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = spriteList[Random.Range(0, spriteList.Count)];
 
-        this.gameObject.transform.position = spawnPoints[Random.Range(0, spawnPoints.Count)];
+        offset = new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0f);
+        this.gameObject.transform.position = spawnPoints[Random.Range(0, spawnPoints.Count)] + offset;
     }
 }

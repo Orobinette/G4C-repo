@@ -20,6 +20,8 @@ public class Tutorials : MonoBehaviour
     List<List<GameObject>> popupTypes = new List<List<GameObject>>();
     List<GameObject> popupList = new List<GameObject>();
     [SerializeField] GameObject htpPanel;
+    [SerializeField] GameObject endPanel;
+
     [SerializeField] List<GameObject> recyclingPopups = new List<GameObject>();
     [SerializeField] List<GameObject> compostPopups = new List<GameObject>();
     [SerializeField] List<GameObject> hazardPopups = new List<GameObject>();
@@ -104,18 +106,13 @@ public class Tutorials : MonoBehaviour
             {
                 Destroy(itemObj);
             }
-
-            truck = Instantiate(truckPref, truckSpawnPoint, Quaternion.identity);
-            truckRenderer = truck.GetComponent<SpriteRenderer>();
-            truckRenderer.sprite = truckSprites[tutorialType];
-            
             itemObj = Instantiate(itemList[index], itemSpawnPoint, Quaternion.identity);
 
             StartCoroutine("PopUpDelay");
         }
         else 
         {
-            EndTutorial();
+            EndTutorialPopup();
         }
     }
 
@@ -132,6 +129,16 @@ public class Tutorials : MonoBehaviour
             exitButton.SetActive(true);
             panelBackground.SetActive(false);
             SpawnItem();
+        }
+    }
+
+    public void EndTutorialPopup() 
+    {
+        if(endPanel.activeInHierarchy == false) 
+        {
+            exitButton.SetActive(false);
+            endPanel.SetActive(true);
+            panelBackground.SetActive(true);
         }
     }
 
@@ -152,7 +159,7 @@ public class Tutorials : MonoBehaviour
     }
     IEnumerator PopUpDelay() 
     {
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(1.5f);
         PopUp();
     }
 
@@ -165,7 +172,7 @@ public class Tutorials : MonoBehaviour
         clickAndDrag.enabled = false;
     }
 
-    void EndTutorial()  
+    public void EndTutorial()  
     {
         SceneManager.LoadScene("StartScene");
     }
