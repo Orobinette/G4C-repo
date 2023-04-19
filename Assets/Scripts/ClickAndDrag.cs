@@ -25,6 +25,8 @@ public class ClickAndDrag : MonoBehaviour
 
     void Start() 
     {
+        activeItems = new List<GameObject>();
+
         gameControllerObj = GameObject.FindWithTag("GameController");
         globalVariables = gameControllerObj.GetComponent<GlobalVariables>();
 

@@ -2129,7 +2129,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Trash game
+  m_text: Eco sorter
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2677497e6dc20f84098498573d67e8c8, type: 2}
   m_sharedMaterial: {fileID: -5759249467917132027, guid: 2677497e6dc20f84098498573d67e8c8, type: 2}
