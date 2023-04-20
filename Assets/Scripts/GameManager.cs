@@ -31,9 +31,12 @@ public class GameManager : MonoBehaviour
     int time = 60; 
     [SerializeField] TextMeshProUGUI timerText;
 
-    //Delay between Trucks spawning
+    //Scripting Variables
     float delayMin = 3f;
     float delayMax = 5f;
+
+    public List<GameObject> heartList = new List<GameObject>();
+    public int heartsRemaining = 2;
 
 
 /*********
@@ -42,7 +45,7 @@ public class GameManager : MonoBehaviour
 
     void Start() 
     {
-        StartCoroutine("Timer");
+        //StartCoroutine("Timer");
         StartCoroutine("SpawnItem");
 
         scoreText.text = "Score: 0";
@@ -169,7 +172,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void EndGame() 
+    public void EndGame() 
     {
         if(score > globalVariables.highScore)
         {

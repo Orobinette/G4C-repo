@@ -105,6 +105,18 @@ public class Item : MonoBehaviour
         }
     }
 
+    void LoseHeart() 
+    {
+        gameManager.heartList[gameManager.heartsRemaining].SetActive(false);
+        gameManager.heartsRemaining--;
+        //Audio.PlaySound(loseHeart);
+
+        if(gameManager.heartsRemaining == 0)
+        {
+            gameManager.EndGame();
+        }
+    }
+
     void Despawn() 
     {
         clickAndDrag.UpdateItems("remove", this.gameObject);
