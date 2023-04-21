@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     bool paused;
 
     //Timer
-    int time = 60; 
+    int time = 0; 
     [SerializeField] TextMeshProUGUI timerText;
 
     //Scripting Variables
@@ -45,11 +45,10 @@ public class GameManager : MonoBehaviour
 
     void Start() 
     {
-        //StartCoroutine("Timer");
+        StartCoroutine("Timer");
         StartCoroutine("SpawnItem");
 
         scoreText.text = "Score: 0";
-        timerText.text = "Timer: 60";
 
         gameControllerObj = GameObject.FindWithTag("GameController");
         globalVariables = gameControllerObj.GetComponent<GlobalVariables>();
@@ -68,7 +67,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator SpawnTruck() 
     {
-        while(time > 0)
+        while(heartsRemaining > 0)
         {
             yield return new WaitForSeconds(Random.Range(delayMin, delayMax));
 
@@ -78,7 +77,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator SpawnItem() 
     {
-        while(time > 0)
+        while(heartsRemaining > 0)
         {
             yield return new WaitForSeconds(Random.Range(delayMin, delayMax));
             Instantiate(itemPref);
@@ -109,37 +108,24 @@ public class GameManager : MonoBehaviour
     IEnumerator Timer()  
     {
         
-        while(time > 0)
+        while(heartsRemaining > 0)
         {
             yield return new WaitForSeconds(1f);
 
-            time --;
-            timerText.text = "Timer: " + time.ToString();
+            time ++;
+            //timerText.text = "Timer: " + time.ToString();
 
             //Time between truck spawns decreases as the game goes on
-            if(time < 40 && time > 20)
+            if(time > 20) 
             {
                 delayMin = 1f;
                 delayMax = 2f;
             }
-            if(time < 20) 
+            else if(time > 40)
             {
                 delayMin = 0.5f;
                 delayMax = 1f;
             }
-            /*
-            if(time == 5)
-            {
-                StartCoroutine("Countdown");
-            }
-            */
-        }
-    
-        if(time == 0) 
-        {
-            yield return new WaitForSeconds(1f);
-
-            EndGame();
         }
     }
 
